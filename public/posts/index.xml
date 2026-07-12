@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Norman Li</title>
+    <link>https://normanli.net/posts/</link>
+    <description>Recent content in Posts on Norman Li</description>
+    <generator>Hugo</generator>
+    <language>en-au</language>
+    <lastBuildDate>Sun, 12 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://normanli.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://normanli.net/posts/hello-world/</link>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to my new blog! This is where I&amp;rsquo;ll share thoughts on technology, family, and everything in between.&lt;/p&gt;
+&lt;p&gt;Built with Hugo + PaperMod, hosted on Cloudflare Pages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
