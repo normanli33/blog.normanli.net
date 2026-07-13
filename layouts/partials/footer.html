@@ -1,8 +1,5 @@
 <footer>
-  <a href="{{ .Site.Params.email }}">Email</a>
-  <a href="{{ .Site.Params.linkedin }}">LinkedIn</a>
-  <a href="{{ .Site.Params.github }}">GitHub</a>
-  {{ with .Site.Home.OutputFormats.Get "rss" }}<a href="{{ .Permalink }}">RSS</a>{{ end }}
-  <span class="spacer"></span>
-  <span>&copy; {{ now.Year }} {{ .Site.Params.author }}</span>
+  <a href="mailto:info@normanli.net">Email</a>
+  <a href="https://github.com/normanli33">GitHub</a>
+  <a href="{{ "index.xml" | absURL }}">RSS</a>
 </footer>

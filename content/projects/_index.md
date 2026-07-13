@@ -1,4 +1,5 @@
 ---
 title: "Projects"
+description: "Case studies showing how I frame problems, analyse evidence, and build practical tools."
 ---
-Small, finished tools. Each links to a repository, a write-up, or a download.
+
