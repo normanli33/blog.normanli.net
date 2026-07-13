@@ -1,41 +1,24 @@
 baseURL = "https://normanli.net/"
 languageCode = "en-au"
-title = "Norman Li"
-theme = "PaperMod"
-[pagination]
-  pagerSize = 10
+title = "Norman Li — Systems, decisions, outcomes"
 enableRobotsTXT = true
 
 [params]
-  description = "Personal blog by Norman Li"
+  description = "Supply chain, analytics and practical AI — explained through clear models and real work."
   author = "Norman Li"
-  DateFormat = "2 January 2006"
-  defaultTheme = "auto"
-  disableThemeToggle = false
-  ShowReadingTime = true
-  ShowShareButtons = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  
-  [params.homeInfoParams]
-    Title = "Hi there 👋"
-    Content = "Welcome to my personal blog. I write about tech, family, and life."
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-  [[menu.main]]
-    identifier = "search"
-    name = "Search"
-    url = "/search/"
-    weight = 20
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 30
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    style = "github-dark"
+    noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = true
+
