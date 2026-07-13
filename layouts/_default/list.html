@@ -1,12 +1,30 @@
 {{ define "main" }}
-<div style="margin:3rem 0 2rem">
-  <p class="ledger" style="margin:0 0 .3rem"><b>{{ .Title | upper }}</b></p>
-  {{ with .Description }}<p style="color:var(--muted);font-size:1rem;margin:0">{{ . }}</p>{{ end }}
-</div>
-{{ range .Pages.ByDate.Reverse }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
+<article>
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+</article>
+
+{{ if eq .Section "writing" }}
+  {{ range .Pages.GroupByDate "2006" }}
+    <div class="year">{{ .Key }}</div>
+    {{ range .Pages }}
+    <a class="entry" href="{{ .RelPermalink }}">
+      <span class="entry-no">{{ with .Params.number }}No. {{ printf "%03d" (int .) }}{{ end }}</span>
+      <span class="entry-title">{{ .Title }}</span>
+      <span class="entry-meta">{{ with .Params.tags }}{{ index . 0 }} &middot; {{ end }}{{ .ReadingTime }} min</span>
+    </a>
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if eq .Section "projects" }}
+  {{ with .Site.Data.projects }}
+    {{ range . }}
+    <div class="project">
+      <a href="{{ .url }}">{{ .name }}</a> &mdash; {{ .blurb | markdownify }}
+      <span class="ledger">&rarr; {{ .linktype }}</span>
+    </div>
+    {{ end }}
+  {{ end }}
 {{ end }}
 {{ end }}

@@ -1,16 +1,23 @@
 {{ define "main" }}
 <article>
-  <p class="ledger"><b>{{ .Section | upper }}</b> · {{ .Date.Format "2 Jan 2006" }} · {{ .ReadingTime }} min read</p>
+  {{ if eq .Section "writing" }}{{ partial "ledger.html" . }}{{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
+  {{ with .Params.dek }}<p class="dek">{{ . | markdownify }}</p>{{ end }}
 
-  {{ if .WordCount | ge 800 }}
-  <nav class="toc-inline" aria-label="Contents">
+  {{ if and (eq .Section "writing") (gt .WordCount 250) (.TableOfContents) }}
+  <div class="toc">
     <span class="ledger">Contents</span>
     {{ .TableOfContents }}
-  </nav>
+  </div>
   {{ end }}
 
-  <div class="content">{{ .Content }}</div>
+  {{ .Content }}
 </article>
+
+{{ if eq .Section "writing" }}
+<div class="pager">
+  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ with .Params.number }}No. {{ printf "%03d" (int .) }} {{ end }}{{ .Title }}</a>{{ else }}<span></span>{{ end }}
+  {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ with .Params.number }}No. {{ printf "%03d" (int .) }} {{ end }}{{ .Title }} &rarr;</a>{{ end }}
+</div>
+{{ end }}
 {{ end }}

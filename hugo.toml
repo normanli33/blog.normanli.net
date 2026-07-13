@@ -1,0 +1,36 @@
+baseURL = "https://normanli.net/"
+languageCode = "en-au"
+title = "Norman Li"
+enableRobotsTXT = true
+timeZone = "Australia/Sydney"
+
+disableKinds = ["taxonomy", "term"]
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
+
+[params]
+  author = "Norman Li"
+  description = "Working notebook of Norman Li — supply chain analyst in Sydney. Demand forecasting, procurement automation, Python, SQL, Power BI, LLM pipelines."
+  currently = "Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent demand forecasting; writing up the results as No. 015."
+  email = "mailto:info@normanli.net"
+  linkedin = "https://www.linkedin.com/"
+  github = "https://github.com/normanli33"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+
+[permalinks]
+  writing = "/writing/:slug/"
+
+[sitemap]
+  changefreq = "monthly"

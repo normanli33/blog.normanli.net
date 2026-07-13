@@ -1,29 +1,28 @@
-<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.68.3"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Supply chain, analytics and practical AI — explained through clear models and real work."><meta name=theme-color content="#FBF7F0" media="(prefers-color-scheme: light)"><meta name=theme-color content="#1E1B16" media="(prefers-color-scheme: dark)"><meta property="og:type" content="website"><meta property="og:title" content="Norman Li — Systems, decisions, outcomes"><meta property="og:description" content="Supply chain, analytics and practical AI — explained through clear models and real work."><meta property="og:url" content="https://normanli.net/"><meta name=twitter:card content="summary_large_image"><link rel=canonical href=https://normanli.net/><link rel=alternate type=application/rss+xml href=https://normanli.net/index.xml title="Norman Li — Systems, decisions, outcomes"><link rel=stylesheet href=/css/main.css><title>Norman Li — Systems, decisions, outcomes</title></head><body><a class=skip-link href=#main>Skip to content</a><header><a class=wordmark href=/>Norman Li</a><nav aria-label=Site><a href=/ class=active>Writing</a>
+<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.139.3"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Norman Li — working notebook</title>
+<script>(function(){try{var e=localStorage.getItem("theme");e&&document.documentElement.setAttribute("data-theme",e)}catch{}})()</script><meta name=description content="Supply chain analyst in Sydney. I work on demand forecasting, procurement automation and the systems around them — Python, SQL, Power BI, and increasingly LLM pipelines.
+This site is my working notebook: problems I&rsquo;ve solved, methods I&rsquo;ve tested, and honest notes on what held up in production and what didn&rsquo;t.
+"><meta name=author content="Norman Li"><link rel=canonical href=https://normanli.net/><meta property="og:title" content="Norman Li"><meta property="og:description" content="Supply chain analyst in Sydney. I work on demand forecasting, procurement automation and the systems around them — Python, SQL, Power BI, and increasingly LLM pipelines.
+This site is my working notebook: problems I&rsquo;ve solved, methods I&rsquo;ve tested, and honest notes on what held up in production and what didn&rsquo;t.
+"><meta property="og:url" content="https://normanli.net/"><meta property="og:type" content="website"><meta name=twitter:card content="summary"><link rel=alternate type=application/rss+xml title="Norman Li" href=https://normanli.net/index.xml><meta name=theme-color content="#FBF7F0" media="(prefers-color-scheme: light)"><meta name=theme-color content="#1E1B16" media="(prefers-color-scheme: dark)"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel=stylesheet><link rel=stylesheet href=/css/main.min.e5c93a132fd45634a6292c565abce216d98b9713eea0af75b6978082ad9d7b45.css integrity="sha256-5ck6Ey/UVjSmKSxWWrziFtmLlxPuoK91tpeAgq2de0U="></head><body><div class=page><header><a class=wordmark href=/>Norman Li</a><nav aria-label=Site><a href=/ aria-current=page>Writing</a>
 <a href=/projects/>Projects</a>
 <a href=/about/>About</a>
-<button class=theme-btn id=theme-toggle aria-label="Toggle colour theme">◑&#8201;theme</button>
-<button class=menu-btn id=menu-toggle aria-label="Toggle menu" aria-expanded=false>☰</button></nav></header><nav class=mobile-nav id=mobile-nav aria-label=Mobile><a href=/>Writing</a>
-<a href=/projects/>Projects</a>
-<a href=/about/>About</a></nav><main id=main class=page><div class=intro><p>Supply chain analyst in Sydney. I work on demand forecasting, procurement
+<button class=theme-btn onclick=toggleTheme() aria-label="Toggle colour theme">&#9685; theme</button></nav></header><main><div class=intro><p>Supply chain analyst in Sydney. I work on demand forecasting, procurement
 automation and the systems around them — Python, SQL, Power BI, and
-increasingly LLM pipelines.</p><p>This site is my working notebook: problems I've solved, methods I've
-tested, and honest notes on what held up in production and what didn't.</p></div><div class=now><span class=ledger>Currently</span>
-Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent
-demand forecasting; exploring semantic-layer design for procurement analytics.</div><h2 class="section-label ledger">Analysis</h2><a class=entry href=/analysis/forecast-bias/><span class=entry-date>18 Jun 2026</span>
-<span class=entry-title>Forecast accuracy is not enough<span>Forecasting · 1 min</span></span></a>
-<a class=entry href=/analysis/inventory-signals/><span class=entry-date>24 May 2026</span>
-<span class=entry-title>Three inventory signals I check first<span>Inventory · 1 min</span></span></a>
-<a class=entry href=/analysis/ai-with-evidence/><span class=entry-date>12 Apr 2026</span>
-<span class=entry-title>AI answers need an evidence trail<span>Applied AI · 1 min</span></span></a><h2 class="section-label ledger">Knowledge</h2><a class=entry href=/knowledge/safety-stock/><span class=entry-date>10 Mar 2026</span>
-<span class=entry-title>Safety stock<span>Inventory · 1 min</span></span></a>
-<a class=entry href=/knowledge/forecast-bias/><span class=entry-date>20 Feb 2026</span>
-<span class=entry-title>Forecast bias<span>Forecasting · 1 min</span></span></a>
-<a class=entry href=/knowledge/abc-xyz/><span class=entry-date>16 Jan 2026</span>
-<span class=entry-title>ABC–XYZ analysis<span>Segmentation · 1 min</span></span></a>
-<a class=entry href=/knowledge/semantic-layer/><span class=entry-date>8 Dec 2025</span>
-<span class=entry-title>Semantic layers<span>Data · 1 min</span></span></a><h2 class="section-label ledger">Projects</h2><a class=entry href=/projects/inventory-control/><span class=entry-date>1 Jul 2026</span>
-<span class=entry-title>Finding the inventory hiding in plain sight<span>1 min</span></span></a>
-<a class=entry href=/projects/analytics-copilot/><span class=entry-date>10 Jun 2026</span>
-<span class=entry-title>An analytics copilot that cites its work<span>1 min</span></span></a></main><footer><a href=mailto:info@normanli.net>Email</a>
+increasingly LLM pipelines.</p><p>This site is my working notebook: problems I&rsquo;ve solved, methods I&rsquo;ve tested,
+and honest notes on what held up in production and what didn&rsquo;t.</p></div><div class=now><span class=ledger>Currently</span>
+Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent demand forecasting; writing up the results as No. 015.</div><h2 class="section-label ledger">Writing</h2><div class=year>2026</div><a class=entry href=/writing/forecasting-intermittent-demand/><span class=entry-no>No. 014</span>
+<span class=entry-title>Forecasting intermittent demand: why our MAPE was lying to us</span>
+<span class=entry-meta>forecasting &#183; 2 min</span>
+</a><a class=entry href=/writing/regex-first-llm-fallback/><span class=entry-no>No. 013</span>
+<span class=entry-title>Regex first, LLM fallback: a document extraction pattern that cut our API cost 92%</span>
+<span class=entry-meta>automation &#183; 1 min</span></a><div class=year>2025</div><a class=entry href=/writing/safety-stock-policy/><span class=entry-no>No. 010</span>
+<span class=entry-title>Safety stock is a policy decision, not a formula</span>
+<span class=entry-meta>inventory &#183; 1 min</span></a><h2 class="section-label ledger">Projects</h2><div class=project><a href=https://github.com/normanli33>Invoice extraction pipeline</a> &mdash; pdfplumber + LLM fallback + SQLite, SHA-256 dedup, multi-currency safe
+<span class=ledger>&rarr; repo</span></div><div class=project><a href=/writing/forecasting-intermittent-demand/>SKU demand forecasting benchmark</a> &mdash; LightGBM vs. Nixtla vs. Chronos on real intermittent series
+<span class=ledger>&rarr; write-up</span></div><div class=project><a href=#>Freight surcharge calculator</a> &mdash; FedEx AU clearance and surcharge model in Excel
+<span class=ledger>&rarr; download</span></div></main><footer><a href=mailto:info@normanli.net>Email</a>
+<a href=https://www.linkedin.com/>LinkedIn</a>
 <a href=https://github.com/normanli33>GitHub</a>
-<a href=https://normanli.net/index.xml>RSS</a></footer><script src=/js/main.js defer></script></body></html>
+<a href=https://normanli.net/index.xml>RSS</a>
+<span class=spacer></span>
+<span>&copy; 2026 Norman Li</span></footer></div><script>function toggleTheme(){var e=document.documentElement,n=e.getAttribute("data-theme")==="dark"||!e.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches,t=n?"light":"dark";e.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch{}}</script></body></html>

@@ -1,43 +1,36 @@
 {{ define "main" }}
-
 <div class="intro">
-  <p>Supply chain analyst in Sydney. I work on demand forecasting, procurement
-  automation and the systems around them — Python, SQL, Power BI, and
-  increasingly LLM pipelines.</p>
-  <p>This site is my working notebook: problems I've solved, methods I've
-  tested, and honest notes on what held up in production and what didn't.</p>
+  {{ .Content }}
 </div>
 
+{{ with .Site.Params.currently }}
 <div class="now">
   <span class="ledger">Currently</span>
-  Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent
-  demand forecasting; exploring semantic-layer design for procurement analytics.
+  {{ . | markdownify }}
 </div>
-
-{{ $sections := slice "analysis" "knowledge" }}
-
-<h2 class="section-label ledger">Analysis</h2>
-{{ range where site.RegularPages "Section" "analysis" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
 {{ end }}
 
-<h2 class="section-label ledger">Knowledge</h2>
-{{ range where site.RegularPages "Section" "knowledge" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
+<h2 class="section-label ledger">Writing</h2>
+
+{{ $entries := where .Site.RegularPages "Section" "writing" }}
+{{ range $entries.GroupByDate "2006" }}
+  <div class="year">{{ .Key }}</div>
+  {{ range .Pages }}
+  <a class="entry" href="{{ .RelPermalink }}">
+    <span class="entry-no">{{ with .Params.number }}No. {{ printf "%03d" (int .) }}{{ end }}</span>
+    <span class="entry-title">{{ .Title }}</span>
+    <span class="entry-meta">{{ with .Params.tags }}{{ index . 0 }} &middot; {{ end }}{{ .ReadingTime }} min</span>
+  </a>
+  {{ end }}
 {{ end }}
 
+{{ with .Site.Data.projects }}
 <h2 class="section-label ledger">Projects</h2>
-{{ range where site.RegularPages "Section" "projects" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ .ReadingTime }} min</span></span>
-</a>
+{{ range . }}
+<div class="project">
+  <a href="{{ .url }}">{{ .name }}</a> &mdash; {{ .blurb | markdownify }}
+  <span class="ledger">&rarr; {{ .linktype }}</span>
+</div>
 {{ end }}
-
+{{ end }}
 {{ end }}

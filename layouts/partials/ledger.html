@@ -1,0 +1,7 @@
+{{- /* renders: NO. 014 · FORECASTING · 30 JUN 2026 · 14 MIN READ */ -}}
+<p class="ledger">
+  {{- with .Params.number }}<b>No. {{ printf "%03d" (int .) }}</b>{{ end }}
+  {{- with .Params.tags }} &middot; {{ delimit . " / " }}{{ end }}
+  &middot; {{ .Date.Format "2 Jan 2006" }}
+  &middot; {{ .ReadingTime }} min read
+</p>
