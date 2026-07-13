@@ -1,7 +1,48 @@
 {{ define "main" }}
-<article>
-  <p class="ledger"><b>About</b></p>
-  <h1>{{ .Title }}</h1>
-  <div class="content">{{ .Content }}</div>
-</article>
+<section class="page-head">
+  <div class="container prose">
+    <span class="eyebrow">About</span>
+    <h1>{{ .Title }}</h1>
+  </div>
+</section>
+<section class="container">
+  <div class="about-grid">
+    <div class="article-body">
+      {{ .Content }}
+
+      <h2>Timeline</h2>
+      <div class="timeline">
+        {{ range site.Data.timeline }}
+        <div class="timeline-row">
+          <span class="yr">{{ .year }}</span>
+          <span class="ev">{{ .event }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-card" style="margin-bottom:1.5rem;">
+        <h3>Core stack</h3>
+        <ul class="stack-list">
+          {{ range .Params.stack }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      <div class="side-card" style="margin-bottom:1.5rem;">
+        <h3>Currently learning</h3>
+        <ul class="stack-list">
+          {{ range .Params.learning }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      <div class="side-card">
+        <h3>Elsewhere</h3>
+        <ul class="side-links">
+          <li><a href="{{ .Site.Params.linkedin }}">LinkedIn</a></li>
+          <li><a href="{{ .Site.Params.github }}">GitHub</a></li>
+          <li><a href="{{ .Site.Params.resume }}">Résumé (PDF)</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
 {{ end }}

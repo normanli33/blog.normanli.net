@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="container prose">
+    <span class="status-chip {{ .Params.status | default "active" }}">{{ .Params.status | default "active" }}</span>
+    <h1 style="margin-top:.75rem;">{{ .Title }}</h1>
+    <div class="page-meta">
+      {{ with .Params.stack }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.repo }}<span><a href="{{ . }}">Repository &rarr;</a></span>{{ end }}
+      {{ with .Params.demo }}<span><a href="{{ . }}">Live demo &rarr;</a></span>{{ end }}
+    </div>
+  </div>
+</section>
+<section class="container">
+  <div class="article-body prose" style="padding:2.5rem 0 4rem;">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

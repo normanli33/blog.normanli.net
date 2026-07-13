@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $tags := .Params.tags }}
+{{ $self := . }}
+<section class="page-head">
+  <div class="container prose">
+    <span class="eyebrow">Garden{{ with .Params.cluster }} &middot; {{ . }}{{ end }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.definition }}<p class="lede" style="margin-top:1rem; font-size:1.05rem;">{{ . }}</p>{{ end }}
+    <div class="tag-row" style="margin-top:1rem;">
+      {{ range $tags }}<a class="tag-chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="article-body prose" style="padding:2.5rem 0;">
+    {{ .Content }}
+
+    <div class="concept-section">
+      <div class="h">Related garden topics</div>
+      {{ $related := where (where site.RegularPages "Section" "garden") "File.Path" "ne" .File.Path }}
+      <ul class="related-list">
+        {{ range $related }}
+          {{ if gt (len (intersect $tags .Params.tags)) 0 }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="concept-section">
+      <div class="h">Referenced in</div>
+      {{ $others := union (where site.RegularPages "Section" "essays") (where site.RegularPages "Section" "lab") }}
+      <ul class="backlink-list">
+        {{ range $others }}
+          {{ if gt (len (intersect $tags .Params.tags)) 0 }}
+          <li>
+            <span class="b-kicker">{{ .Section | title }}</span>
+            <div><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="list-head">
+  <div class="container prose">
+    <span class="eyebrow">Taxonomy</span>
+    <h1>{{ .Title }}</h1>
+  </div>
+</section>
+<section class="container">
+  <div class="tag-row" style="padding:2.5rem 0;">
+    {{ range .Pages }}
+    <a class="tag-chip" href="{{ .RelPermalink }}">{{ .Title }} ({{ .Pages | len }})</a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="container prose">
+    {{ with .Params.categories }}<span class="eyebrow">{{ index . 0 }}</span>{{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="page-meta">
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span>{{ .ReadingTime }} min read</span>
+      <span class="tag-row">
+        {{ range .Params.tags }}<a class="tag-chip" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>{{ end }}
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="article-layout">
+    {{ partial "toc.html" . }}
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

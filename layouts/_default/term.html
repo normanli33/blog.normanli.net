@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="list-head">
+  <div class="container prose">
+    <span class="eyebrow">Tag</span>
+    <h1>{{ .Title }}</h1>
+    <p>Everything tagged &ldquo;{{ .Title }}&rdquo; across Essays, Lab, and the Garden.</p>
+  </div>
+</section>
+<section class="container">
+  <div class="entry-list prose" style="padding-top:1rem;">
+    {{ range .Pages.ByDate.Reverse }}
+    <a class="entry-row" href="{{ .RelPermalink }}">
+      <span>
+        <span class="title">{{ .Title }}</span>
+        <div class="summary">{{ .Section | title }}</div>
+      </span>
+      <span class="meta">{{ .Date.Format "Jan 2, 2006" }}</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

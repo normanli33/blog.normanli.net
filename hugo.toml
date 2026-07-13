@@ -1,0 +1,81 @@
+baseURL = "https://normanli.net/"
+locale = "en-AU"
+title = "Norman Li"
+enableRobotsTXT = true
+enableEmoji = false
+rssLimit = 30
+
+summaryLength = 40
+
+[pagination]
+  pagerSize = 12
+
+[params]
+  tagline = "Supply chain, data, and practical AI — thought out loud."
+  description = "Norman Li writes on supply chain planning, business analysis, data, and practical AI. A personal library of essays, projects, and evergreen notes."
+  email = "info@normanli.net"
+  github = "https://github.com/normanli33"
+  linkedin = "https://www.linkedin.com/"
+  resume = "/files/norman-li-resume.pdf"
+  accentColorLight = "#2C5282"
+  accentColorDark = "#8FB0DD"
+  math = true
+  mermaid = true
+
+[menu]
+  [[menu.main]]
+    name = "Essays"
+    url = "/essays/"
+    weight = 10
+  [[menu.main]]
+    name = "Lab"
+    url = "/lab/"
+    weight = 20
+  [[menu.main]]
+    name = "Garden"
+    url = "/garden/"
+    weight = 30
+  [[menu.main]]
+    name = "Stream"
+    url = "/stream/"
+    weight = 40
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 50
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+  [markup.highlight]
+    style = "monokailight"
+    noClasses = false
+    lineNos = false
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+
+[privacy]
+  [privacy.vimeo]
+    disabled = false
+  [privacy.twitter]
+    disabled = false
+  [privacy.youtube]
+    disabled = false

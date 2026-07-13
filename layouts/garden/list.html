@@ -1,0 +1,37 @@
+{{ define "main" }}
+<section class="list-head">
+  <div class="container prose">
+    <span class="eyebrow">Digital Garden</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+  </div>
+</section>
+
+<section class="container" style="padding:2.5rem 0 4rem;">
+  {{ $clusters := slice }}
+  {{ range .Pages }}
+    {{ $c := .Params.cluster | default "General" }}
+    {{ if not (in $clusters $c) }}{{ $clusters = $clusters | append $c }}{{ end }}
+  {{ end }}
+  {{ $others := union (where site.RegularPages "Section" "essays") (where site.RegularPages "Section" "lab") }}
+
+  {{ range $clusters }}
+  {{ $cluster := . }}
+  <div class="garden-cluster">
+    <h2>{{ $cluster }}</h2>
+    <div class="garden-grid">
+      {{ range where $.Pages "Params.cluster" $cluster }}
+      {{ $tags := .Params.tags }}
+      {{ $count := 0 }}
+      {{ range $others }}{{ if gt (len (intersect $tags .Params.tags)) 0 }}{{ $count = add $count 1 }}{{ end }}{{ end }}
+      <a class="garden-card" href="{{ .RelPermalink }}">
+        <span class="g-title">{{ .Title }}</span>
+        <span class="g-def">{{ .Params.definition }}</span>
+        <span class="g-back">&#8618; referenced in {{ $count }} {{ if eq $count 1 }}piece{{ else }}pieces{{ end }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</section>
+{{ end }}

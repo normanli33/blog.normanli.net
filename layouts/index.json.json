@@ -1,0 +1,13 @@
+[
+  {{ $pages := where site.RegularPages "Section" "in" (slice "essays" "lab" "garden" "stream") }}
+  {{ range $i, $p := $pages.ByDate.Reverse }}
+  {{ if $i }},{{ end }}
+  {
+    "title": {{ $p.Title | jsonify }},
+    "url": {{ $p.RelPermalink | jsonify }},
+    "section": {{ $p.Section | jsonify }},
+    "summary": {{ ($p.Params.definition | default $p.Summary | plainify | truncate 140) | jsonify }},
+    "tags": {{ $p.Params.tags | default (slice) | jsonify }}
+  }
+  {{ end }}
+]

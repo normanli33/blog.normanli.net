@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="contact-block">
+  <div class="container prose">
+    <span class="eyebrow">Contact</span>
+    <h1 style="margin-top:.5rem;">Say hello</h1>
+    <p class="big-link"><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+    <p class="also">
+      <a href="{{ .Site.Params.github }}">GitHub</a> &middot; <a href="{{ .Site.Params.linkedin }}">LinkedIn</a>
+    </p>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,9 @@
+{{ $toc := .TableOfContents }}
+{{ if in $toc "<a" }}
+<div class="toc-wrap">
+  <div class="h">On this page</div>
+  <nav aria-label="Table of contents">
+    {{ $toc }}
+  </nav>
+</div>
+{{ end }}

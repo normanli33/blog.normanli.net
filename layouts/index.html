@@ -1,49 +1,97 @@
 {{ define "main" }}
+{{ $essays := where site.RegularPages "Section" "essays" }}
+{{ $lab := where site.RegularPages "Section" "lab" }}
+{{ $stream := where site.RegularPages "Section" "stream" }}
 
-<div class="intro">
-  <p>Supply chain analyst in Sydney. I work on demand forecasting, procurement
-  automation and the systems around them — Python, SQL, Power BI, and
-  increasingly LLM pipelines.</p>
-  <p>This site is my working notebook: problems I've solved, methods I've
-  tested, and honest notes on what held up in production and what didn't.</p>
-</div>
+<section class="hero">
+  <div class="container prose">
+    <span class="eyebrow">Supply chain &middot; data &middot; practical AI</span>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ .Params.lede | default .Site.Params.tagline }}</p>
+  </div>
+</section>
 
-<div class="now">
-  <span class="ledger">Currently</span>
-  Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent
-  demand forecasting; exploring semantic-layer design for procurement analytics.
-</div>
-
-<h2 class="section-label ledger">Analysis</h2>
-{{ range where site.RegularPages "Section" "analysis" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
+{{ if $essays }}
+<section class="home-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Featured essays</h2>
+      <a class="more" href="{{ "/essays/" | relURL }}">All essays &rarr;</a>
+    </div>
+    <div class="card-grid">
+      {{ range first 3 $essays.ByDate.Reverse }}
+      <a class="entry-card" href="{{ .RelPermalink }}">
+        {{ with .Params.categories }}<span class="kicker">{{ index . 0 }}</span>{{ end }}
+        <div class="title">{{ .Title }}</div>
+        <div class="meta">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} min</div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
 
-<h2 class="section-label ledger">Knowledge</h2>
-{{ range where site.RegularPages "Section" "knowledge" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
+{{ if $lab }}
+<section class="home-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>From the Lab</h2>
+      <a class="more" href="{{ "/lab/" | relURL }}">All projects &rarr;</a>
+    </div>
+    <div class="card-grid">
+      {{ range first 3 $lab.ByDate.Reverse }}
+      <a class="entry-card" href="{{ .RelPermalink }}">
+        <span class="kicker">{{ .Params.status | default "Active" | title }}</span>
+        <div class="title">{{ .Title }}</div>
+        <div class="meta">{{ .Params.stack }}</div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
 
-<h2 class="section-label ledger">Projects</h2>
-{{ range where site.RegularPages "Section" "projects" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ .ReadingTime }} min</span></span>
-</a>
+{{ if $stream }}
+<section class="home-section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Stream</h2>
+      <a class="more" href="{{ "/stream/" | relURL }}">Everything &rarr;</a>
+    </div>
+    <div class="stream-list">
+      {{ range first 3 $stream.ByDate.Reverse }}
+      <div class="stream-row">
+        <span class="date">{{ .Date.Format "Jan 2" }}</span>
+        <span class="body-text">{{ .Content }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 {{ end }}
 
-<h2 class="section-label ledger">Study</h2>
-{{ range where site.RegularPages "Section" "study" | first 5 }}
-<a class="entry" href="{{ .RelPermalink }}">
-  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
-  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
-</a>
-{{ end }}
+<section class="home-section">
+  <div class="container prose">
+    <div class="section-head"><h2>Timeline</h2></div>
+    <div class="timeline">
+      {{ range site.Data.timeline }}
+      <div class="timeline-row">
+        <span class="yr">{{ .year }}</span>
+        <span class="ev">{{ .event }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
 
+<section class="home-section" style="border-bottom:none;">
+  <div class="container cta-line">
+    Say hello &rarr;
+    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    &middot;
+    <a href="{{ .Site.Params.github }}">GitHub</a>
+    &middot;
+    <a href="{{ .Site.Params.linkedin }}">LinkedIn</a>
+  </div>
+</section>
 {{ end }}

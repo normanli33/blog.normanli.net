@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="page-head">
+  <div class="container prose">
+    <span class="eyebrow">Stream &middot; {{ .Date.Format "Jan 2, 2006" }}</span>
+    <h1>{{ .Title }}</h1>
+  </div>
+</section>
+<section class="container">
+  <div class="article-body prose" style="padding:2.5rem 0 4rem;">
+    {{ .Content }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="list-head">
+  <div class="container prose">
+    <span class="eyebrow">Essays</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+  </div>
+</section>
+<section class="container">
+  <div class="entry-list prose">
+    {{ range .Pages.ByDate.Reverse }}
+    <a class="entry-row" href="{{ .RelPermalink }}">
+      <span>
+        <span class="title">{{ .Title }}</span>
+        {{ with .Summary }}<div class="summary">{{ . | plainify | truncate 130 }}</div>{{ end }}
+      </span>
+      <span class="meta">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} min</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

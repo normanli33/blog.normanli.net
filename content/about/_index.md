@@ -1,28 +1,11 @@
 ---
 title: "About"
-description: "Supply chain professional, business analyst, and builder of practical analytical systems."
+description: "Norman Li — supply chain planning, business analysis, and practical AI."
+stack: ["Python", "SQL", "Power BI", "Excel", "Streamlit", "Hugo"]
+learning: ["LLM evaluation methods", "Causal inference for demand planning", "Rust, slowly"]
 ---
+I plan inventory for a living, which mostly means living inside the gap between what a forecast says and what actually happens. I got into data and automation the way most analysts do — by being tired of waiting on someone else's report, then tired of re-running my own.
 
-## My approach
+Most of my work sits at the intersection of supply chain operations and the tools that make analyzing it faster: SQL for the data, Python for the automation, Power BI for the conversation with people who don't want to open either. More recently, that's extended into using LLMs for the parts of planning that are more judgment than arithmetic — writing up exceptions, summarizing driver analysis, drafting the first pass of anything.
 
-I start with the decision: who needs to decide what, with which evidence, under which constraints? From there I work backwards into the process, data, model, and interface.
-
-## Experience
-
-My work spans demand planning, inventory optimisation, procurement, business analysis, and decision support. I use Python, SQL, Power BI, and applied AI where they make the operating system clearer—not simply more technical.
-
-## What I’m learning now
-
-- Reliable analytical agents and evaluation
-- Forecasting under sparse, intermittent demand
-- Data product design and semantic layers
-- Better ways to communicate uncertainty
-
-## Career principles
-
-**Make the problem legible.** A shared model of the problem is often the first useful deliverable.
-
-**Build for action.** Analysis should change a decision, workflow, or outcome.
-
-**Show the evidence.** Trust grows when assumptions and transformations are inspectable.
-
+This site is where the slower thinking goes: essays when something's worth writing up properly, the Lab when there's working code behind a claim, the Garden for ideas I keep returning to, and the Stream for everything too small to be its own essay but too useful to lose.

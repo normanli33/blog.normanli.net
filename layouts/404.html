@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "nav.html" . }}
+  <main id="main">
+    <section class="contact-block">
+      <div class="container prose">
+        <span class="eyebrow">404</span>
+        <h1 style="margin-top:.5rem;">Nothing here</h1>
+        <p class="also">This page doesn't exist. Try the <a href="{{ "/" | relURL }}">home page</a> or search with <span class="kbd">&#8984;K</span>.</p>
+      </div>
+    </section>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "search-modal.html" . }}
+  <script src="{{ "js/theme.js" | relURL }}" defer></script>
+  <script src="{{ "js/search.js" | relURL }}" defer></script>
+  <script src="{{ "js/nav.js" | relURL }}" defer></script>
+</body>
+</html>

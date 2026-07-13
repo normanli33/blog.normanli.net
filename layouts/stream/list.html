@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="list-head">
+  <div class="container prose">
+    <span class="eyebrow">Stream</span>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+  </div>
+</section>
+<section class="container">
+  <div class="stream-list prose" style="padding:2.5rem 0 4rem;">
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="stream-row">
+      <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="body-text">{{ .Content }}</span>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
