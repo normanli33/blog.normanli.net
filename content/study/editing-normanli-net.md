@@ -14,12 +14,7 @@ Quick reference for maintaining the blog at [normanli.net](https://normanli.net)
 - **Static site:** Hugo (v0.68.3 locally, newer on Cloudflare)
 - **Hosting:** Cloudflare Pages (auto-deploys from GitHub)
 - **Repo:** `normanli33/blog.normanli.net` (master branch)
-- **Theme:** Custom minimal (content-first design, inspired by Simon Willison)
-  - Muted terracotta accent (`--accent: #b8543a`), warm cream background
-  - Narrow reading width (720px), chronological entry stream
-  - System `prefers-color-scheme` for dark mode (no toggle)
-  - Serif body (`Source Serif 4`), sans headings (`Manrope`)
-  - Self-hosted fonts (9 TTF files, no CDN calls)
+- **Theme:** Custom (ChatGPT Codex design, self-hosted fonts, warm terracotta palette)
 
 ## Content sections
 
@@ -30,12 +25,6 @@ Quick reference for maintaining the blog at [normanli.net](https://normanli.net)
 | `knowledge/` | `/knowledge/...` | Short reference concepts |
 | `study/` | `/study/...` | Course / personal study notes |
 | `about/` | `/about/` | Single about page |
-
-## Style reference
-
-- **Homepage:** Intro paragraph + chronological stream of recent entries (no hero, no cards, no CTA)
-- **Article page:** Date, reading time, section, tags → title → serif body content (no TOC, no author aside)
-- **Listing page:** Section title + description → chronological entry stream with dates on the left
 
 ## Quick edit (fix a typo)
 
