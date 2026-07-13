@@ -1,0 +1,21 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Safety stock is a policy decision, not a formula · Norman Li</title>
+<script>(function(){try{var e=localStorage.getItem("theme");e&&document.documentElement.setAttribute("data-theme",e)}catch{}})()</script><meta name=description content="The z-score formula answers a question nobody asked."><meta name=author content="Norman Li"><link rel=canonical href=https://normanli.net/writing/safety-stock-policy/><meta property="og:title" content="Safety stock is a policy decision, not a formula"><meta property="og:description" content="The z-score formula answers a question nobody asked."><meta property="og:url" content="https://normanli.net/writing/safety-stock-policy/"><meta property="og:type" content="article"><meta name=twitter:card content="summary"><link rel=alternate type=application/rss+xml title="Norman Li" href=https://normanli.net/index.xml><meta name=theme-color content="#FBF7F0" media="(prefers-color-scheme: light)"><meta name=theme-color content="#1E1B16" media="(prefers-color-scheme: dark)"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel=stylesheet><link rel=stylesheet href=/css/main.min.e5c93a132fd45634a6292c565abce216d98b9713eea0af75b6978082ad9d7b45.css integrity="sha256-5ck6Ey/UVjSmKSxWWrziFtmLlxPuoK91tpeAgq2de0U="></head><body><div class=page><header><a class=wordmark href=/>Norman Li</a><nav aria-label=Site><a href=/ aria-current=page>Writing</a>
+<a href=/projects/>Projects</a>
+<a href=/about/>About</a>
+<button class=theme-btn onclick=toggleTheme() aria-label="Toggle colour theme">&#9685; theme</button></nav></header><main><article><p class=ledger><b>No. 010</b> &#183; inventory
+&#183; 9 Nov 2025
+&#183; 1 min read</p><h1>Safety stock is a policy decision, not a formula</h1><p class=dek>The z-score formula answers a question nobody asked.</p><h2 id=problem>Problem</h2><p>The textbook safety stock formula assumes you have already decided your
+service level. In practice that decision — how often are we willing to stock
+out, per SKU class, and who signs off on it — is the entire problem.</p><h2 id=background>Background</h2><p>Demand variability and lead time variability are inputs. Service level is a
+trade-off between working capital and customer promises, which makes it a
+management policy, not a statistical parameter.</p><h2 id=analysis>Analysis</h2><p>We classified SKUs by margin contribution and demand pattern, then priced the
+incremental holding cost of each service-level tier so the trade-off was a
+dollar figure rather than a z-score.</p><h2 id=recommendation>Recommendation</h2><p>Bring the service-level matrix to S&amp;OP as a decision, with costs attached.
+The formula comes after the signature.</p><h2 id=lessons-learned>Lessons learned</h2><p>Framing the same numbers as &ldquo;policy options with prices&rdquo; instead of
+&ldquo;statistical outputs&rdquo; changed the meeting entirely.</p></article><div class=pager><span></span>
+<a href=/writing/regex-first-llm-fallback/>No. 013 Regex first, LLM fallback: a document extraction pattern that cut our API cost 92% &rarr;</a></div></main><footer><a href=mailto:info@normanli.net>Email</a>
+<a href=https://www.linkedin.com/>LinkedIn</a>
+<a href=https://github.com/normanli33>GitHub</a>
+<a href=https://normanli.net/index.xml>RSS</a>
+<span class=spacer></span>
+<span>&copy; 2026 Norman Li</span></footer></div><script>function toggleTheme(){var e=document.documentElement,n=e.getAttribute("data-theme")==="dark"||!e.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches,t=n?"light":"dark";e.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch{}}</script></body></html>

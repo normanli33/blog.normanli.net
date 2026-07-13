@@ -1,6 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Norman Li on Norman Li — Systems, decisions, outcomes</title><link>https://normanli.net/</link><description>Recent content in Norman Li on Norman Li — Systems, decisions, outcomes</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://normanli.net/index.xml" rel="self" type="application/rss+xml"/><item><title>CS336 — Language Modeling from Scratch</title><link>https://normanli.net/study/cs336-language-modeling-from-scratch/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/study/cs336-language-modeling-from-scratch/</guid><description>Course: Stanford CS336 — Spring 2026
-Instructors: Percy Liang &amp;amp; Tatsunori Hashimoto
-Unit value: 5 units — implementation-heavy
-&amp;ldquo;We will lead students through every aspect of language model creation, including data collection and cleaning for pre-training, transformer model construction, model training, and evaluation before deployment.&amp;rdquo;
-Prerequisites Proficiency in Python (minimal scaffolding, order-of-magnitude more code than typical AI classes) PyTorch + systems concepts (memory hierarchy, GPU efficiency) Calculus, Linear Algebra, Probability Machine Learning (CS221/CS229/CS224N or equivalent) Assignments # Topic Key Skills 1 Basics Tokenisation, embeddings, transformer forward pass 2 Systems Kernel optimisation, memory-efficient attention, distributed training 3 Scaling Multi-GPU training, pipeline &amp;amp; tensor parallelism 4 Data Data collection, cleaning, deduplication, mixing strategies 5 Alignment &amp;amp; RL RLHF, DPO, reasoning-oriented RL Logistics Lectures: Mon/Wed 3:00–4:20pm PT (Skilling Auditorium) Recordings: YouTube playlist GPU: Cloud compute for self-study (follow-along at home) Why this course matters Most LLM courses treat the model as a black box API.</description></item><item><title>Editing normanli.net — Publishing Workflow</title><link>https://normanli.net/study/editing-normanli-net/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/study/editing-normanli-net/</guid><description>Quick reference for maintaining the blog at normanli.net.
-Tech stack Static site: Hugo (v0.68.3 locally, newer on Cloudflare) Hosting: Cloudflare Pages (auto-deploys from GitHub) Repo: normanli33/blog.normanli.net (master branch) Theme: Custom (ChatGPT Codex design, self-hosted fonts, warm terracotta palette) Content sections Section URL What goes there analysis/ /analysis/... Long-form deep dives projects/ /projects/... Project case studies knowledge/ /knowledge/... Short reference concepts study/ /study/.</description></item><item><title>Finding the inventory hiding in plain sight</title><link>https://normanli.net/projects/inventory-control/</link><pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/projects/inventory-control/</guid><description>A practical segmentation model that gives planners a credible, prioritised action queue.</description></item><item><title>Forecast accuracy is not enough</title><link>https://normanli.net/analysis/forecast-bias/</link><pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/analysis/forecast-bias/</guid><description>Why bias tells a more useful operational story—and how to act on it.</description></item><item><title>An analytics copilot that cites its work</title><link>https://normanli.net/projects/analytics-copilot/</link><pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/projects/analytics-copilot/</guid><description>A safer path from natural-language questions to trusted business answers.</description></item><item><title>Three inventory signals I check first</title><link>https://normanli.net/analysis/inventory-signals/</link><pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/analysis/inventory-signals/</guid><description>A compact diagnostic sequence for finding the real source of inventory imbalance.</description></item><item><title>AI answers need an evidence trail</title><link>https://normanli.net/analysis/ai-with-evidence/</link><pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/analysis/ai-with-evidence/</guid><description>Designing AI systems that people can verify before they act.</description></item><item><title>Safety stock</title><link>https://normanli.net/knowledge/safety-stock/</link><pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/knowledge/safety-stock/</guid><description>What safety stock is, what it protects against, and where common formulas fail.</description></item><item><title>Forecast bias</title><link>https://normanli.net/knowledge/forecast-bias/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/knowledge/forecast-bias/</guid><description>A directional measure that surfaces systematic under- or over-forecasting.</description></item><item><title>ABC–XYZ analysis</title><link>https://normanli.net/knowledge/abc-xyz/</link><pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/knowledge/abc-xyz/</guid><description>Combining value and variability to select differentiated planning policies.</description></item><item><title>Semantic layers</title><link>https://normanli.net/knowledge/semantic-layer/</link><pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate><guid>https://normanli.net/knowledge/semantic-layer/</guid><description>How shared metric definitions create more reliable self-service analytics.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Norman Li</title><link>https://normanli.net/</link><description>Recent content on Norman Li</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +1000</lastBuildDate><atom:link href="https://normanli.net/index.xml" rel="self" type="application/rss+xml"/><item><title>CS336 — Language Modeling from Scratch</title><link>https://normanli.net/study/cs336-language-modeling-from-scratch/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/study/cs336-language-modeling-from-scratch/</guid><description>&lt;p>&lt;strong>Course:&lt;/strong> &lt;a href="https://cs336.stanford.edu/">Stanford CS336&lt;/a> — Spring 2026&lt;br>
+&lt;strong>Instructors:&lt;/strong> Percy Liang &amp;amp; Tatsunori Hashimoto&lt;br>
+&lt;strong>Unit value:&lt;/strong> 5 units — implementation-heavy&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;We will lead students through every aspect of language model creation, including data collection and cleaning for pre-training, transformer model construction, model training, and evaluation before deployment.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;ul>
+&lt;li>Proficiency in Python (minimal scaffolding, order-of-magnitude more code than typical AI classes)&lt;/li>
+&lt;li>PyTorch + systems concepts (memory hierarchy, GPU efficiency)&lt;/li>
+&lt;li>Calculus, Linear Algebra, Probability&lt;/li>
+&lt;li>Machine Learning (CS221/CS229/CS224N or equivalent)&lt;/li>
+&lt;/ul>
+&lt;h2 id="assignments">Assignments&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>#&lt;/th>
+ &lt;th>Topic&lt;/th>
+ &lt;th>Key Skills&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>Basics&lt;/td>
+ &lt;td>Tokenisation, embeddings, transformer forward pass&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>2&lt;/td>
+ &lt;td>Systems&lt;/td>
+ &lt;td>Kernel optimisation, memory-efficient attention, distributed training&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3&lt;/td>
+ &lt;td>Scaling&lt;/td>
+ &lt;td>Multi-GPU training, pipeline &amp;amp; tensor parallelism&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4&lt;/td>
+ &lt;td>Data&lt;/td>
+ &lt;td>Data collection, cleaning, deduplication, mixing strategies&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>5&lt;/td>
+ &lt;td>Alignment &amp;amp; RL&lt;/td>
+ &lt;td>RLHF, DPO, reasoning-oriented RL&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="logistics">Logistics&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Lectures:&lt;/strong> Mon/Wed 3:00–4:20pm PT (Skilling Auditorium)&lt;/li>
+&lt;li>&lt;strong>Recordings:&lt;/strong> &lt;a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOwGM7CItm7WzqBR4Y9J1xL">YouTube playlist&lt;/a>&lt;/li>
+&lt;li>&lt;strong>GPU:&lt;/strong> Cloud compute for self-study (follow-along at home)&lt;/li>
+&lt;/ul>
+&lt;h2 id="why-this-course-matters">Why this course matters&lt;/h2>
+&lt;p>Most LLM courses treat the model as a black box API. CS336 is the opposite — you implement everything from scratch, mirroring the approach of an OS course where you build a full operating system. This gives you:&lt;/p></description></item><item><title>Editing normanli.net — Publishing Workflow</title><link>https://normanli.net/study/editing-normanli-net/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/study/editing-normanli-net/</guid><description>&lt;p>Quick reference for maintaining the blog at &lt;a href="https://normanli.net">normanli.net&lt;/a>.&lt;/p>
+&lt;h2 id="tech-stack">Tech stack&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Static site:&lt;/strong> Hugo (v0.68.3 locally, newer on Cloudflare)&lt;/li>
+&lt;li>&lt;strong>Hosting:&lt;/strong> Cloudflare Pages (auto-deploys from GitHub)&lt;/li>
+&lt;li>&lt;strong>Repo:&lt;/strong> &lt;code>normanli33/blog.normanli.net&lt;/code> (master branch)&lt;/li>
+&lt;li>&lt;strong>Theme:&lt;/strong> Custom (ChatGPT Codex design, self-hosted fonts, warm terracotta palette)&lt;/li>
+&lt;/ul>
+&lt;h2 id="content-sections">Content sections&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Section&lt;/th>
+ &lt;th>URL&lt;/th>
+ &lt;th>What goes there&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>analysis/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/analysis/...&lt;/code>&lt;/td>
+ &lt;td>Long-form deep dives&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>projects/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/projects/...&lt;/code>&lt;/td>
+ &lt;td>Project case studies&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>knowledge/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/knowledge/...&lt;/code>&lt;/td>
+ &lt;td>Short reference concepts&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>study/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/study/...&lt;/code>&lt;/td>
+ &lt;td>Course / personal study notes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>about/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/about/&lt;/code>&lt;/td>
+ &lt;td>Single about page&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="quick-edit-fix-a-typo">Quick edit (fix a typo)&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> ~/blog.normanli.net
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vim content/analysis/forecast-bias.md &lt;span class="c1"># edit the file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo --minify &lt;span class="c1"># verify it builds&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git commit -m &lt;span class="s2">&amp;#34;Fix typo&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Cloudflare auto-deploys in ~30 seconds.&lt;/p></description></item><item><title>Finding the inventory hiding in plain sight</title><link>https://normanli.net/projects/inventory-control/</link><pubDate>Wed, 01 Jul 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/projects/inventory-control/</guid><description>A practical segmentation model that gives planners a credible, prioritised action queue.</description></item><item><title>Forecast accuracy is not enough</title><link>https://normanli.net/analysis/forecast-bias/</link><pubDate>Thu, 18 Jun 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/analysis/forecast-bias/</guid><description>Why bias tells a more useful operational story—and how to act on it.</description></item><item><title>An analytics copilot that cites its work</title><link>https://normanli.net/projects/analytics-copilot/</link><pubDate>Wed, 10 Jun 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/projects/analytics-copilot/</guid><description>A safer path from natural-language questions to trusted business answers.</description></item><item><title>Three inventory signals I check first</title><link>https://normanli.net/analysis/inventory-signals/</link><pubDate>Sun, 24 May 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/analysis/inventory-signals/</guid><description>A compact diagnostic sequence for finding the real source of inventory imbalance.</description></item><item><title>AI answers need an evidence trail</title><link>https://normanli.net/analysis/ai-with-evidence/</link><pubDate>Sun, 12 Apr 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/analysis/ai-with-evidence/</guid><description>Designing AI systems that people can verify before they act.</description></item><item><title>Safety stock</title><link>https://normanli.net/knowledge/safety-stock/</link><pubDate>Tue, 10 Mar 2026 00:00:00 +1100</pubDate><guid>https://normanli.net/knowledge/safety-stock/</guid><description>What safety stock is, what it protects against, and where common formulas fail.</description></item><item><title>Forecast bias</title><link>https://normanli.net/knowledge/forecast-bias/</link><pubDate>Fri, 20 Feb 2026 00:00:00 +1100</pubDate><guid>https://normanli.net/knowledge/forecast-bias/</guid><description>A directional measure that surfaces systematic under- or over-forecasting.</description></item><item><title>ABC–XYZ analysis</title><link>https://normanli.net/knowledge/abc-xyz/</link><pubDate>Fri, 16 Jan 2026 00:00:00 +1100</pubDate><guid>https://normanli.net/knowledge/abc-xyz/</guid><description>Combining value and variability to select differentiated planning policies.</description></item><item><title>Semantic layers</title><link>https://normanli.net/knowledge/semantic-layer/</link><pubDate>Mon, 08 Dec 2025 00:00:00 +1100</pubDate><guid>https://normanli.net/knowledge/semantic-layer/</guid><description>How shared metric definitions create more reliable self-service analytics.</description></item></channel></rss>

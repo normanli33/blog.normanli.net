@@ -1,25 +1,27 @@
 baseURL = "https://normanli.net/"
 languageCode = "en-au"
-title = "Norman Li — Systems, decisions, outcomes"
+title = "Norman Li"
 enableRobotsTXT = true
+timeZone = "Australia/Sydney"
 
 [params]
-  description = "Supply chain, analytics and practical AI — explained through clear models and real work."
-  mainSections = ["analysis", "projects", "knowledge", "study"]
   author = "Norman Li"
+  description = "Supply chain analyst in Sydney. Demand forecasting, procurement automation, Python, SQL, Power BI, LLM pipelines."
 
 [markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = false
   [markup.goldmark.renderer]
     unsafe = true
-  [markup.highlight]
-    style = "github-dark"
-    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
+  section = ["HTML"]
 
-[outputFormats.JSON]
-  mediaType = "application/json"
-  baseName = "index"
-  isPlainText = true
-
+[sitemap]
+  changefreq = "monthly"

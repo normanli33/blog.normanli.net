@@ -1,2 +1,51 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>meta on Norman Li — Systems, decisions, outcomes</title><link>https://normanli.net/tags/meta/</link><description>Recent content in meta on Norman Li — Systems, decisions, outcomes</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://normanli.net/tags/meta/index.xml" rel="self" type="application/rss+xml"/><item><title>Editing normanli.net — Publishing Workflow</title><link>https://normanli.net/study/editing-normanli-net/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/study/editing-normanli-net/</guid><description>Quick reference for maintaining the blog at normanli.net.
-Tech stack Static site: Hugo (v0.68.3 locally, newer on Cloudflare) Hosting: Cloudflare Pages (auto-deploys from GitHub) Repo: normanli33/blog.normanli.net (master branch) Theme: Custom (ChatGPT Codex design, self-hosted fonts, warm terracotta palette) Content sections Section URL What goes there analysis/ /analysis/... Long-form deep dives projects/ /projects/... Project case studies knowledge/ /knowledge/... Short reference concepts study/ /study/.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meta on Norman Li</title><link>https://normanli.net/tags/meta/</link><description>Recent content in Meta on Norman Li</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +1000</lastBuildDate><atom:link href="https://normanli.net/tags/meta/index.xml" rel="self" type="application/rss+xml"/><item><title>Editing normanli.net — Publishing Workflow</title><link>https://normanli.net/study/editing-normanli-net/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/study/editing-normanli-net/</guid><description>&lt;p>Quick reference for maintaining the blog at &lt;a href="https://normanli.net">normanli.net&lt;/a>.&lt;/p>
+&lt;h2 id="tech-stack">Tech stack&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Static site:&lt;/strong> Hugo (v0.68.3 locally, newer on Cloudflare)&lt;/li>
+&lt;li>&lt;strong>Hosting:&lt;/strong> Cloudflare Pages (auto-deploys from GitHub)&lt;/li>
+&lt;li>&lt;strong>Repo:&lt;/strong> &lt;code>normanli33/blog.normanli.net&lt;/code> (master branch)&lt;/li>
+&lt;li>&lt;strong>Theme:&lt;/strong> Custom (ChatGPT Codex design, self-hosted fonts, warm terracotta palette)&lt;/li>
+&lt;/ul>
+&lt;h2 id="content-sections">Content sections&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Section&lt;/th>
+ &lt;th>URL&lt;/th>
+ &lt;th>What goes there&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;code>analysis/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/analysis/...&lt;/code>&lt;/td>
+ &lt;td>Long-form deep dives&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>projects/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/projects/...&lt;/code>&lt;/td>
+ &lt;td>Project case studies&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>knowledge/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/knowledge/...&lt;/code>&lt;/td>
+ &lt;td>Short reference concepts&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>study/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/study/...&lt;/code>&lt;/td>
+ &lt;td>Course / personal study notes&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;code>about/&lt;/code>&lt;/td>
+ &lt;td>&lt;code>/about/&lt;/code>&lt;/td>
+ &lt;td>Single about page&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="quick-edit-fix-a-typo">Quick edit (fix a typo)&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> ~/blog.normanli.net
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">vim content/analysis/forecast-bias.md &lt;span class="c1"># edit the file&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo --minify &lt;span class="c1"># verify it builds&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add -A &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git commit -m &lt;span class="s2">&amp;#34;Fix typo&amp;#34;&lt;/span> &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> git push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Cloudflare auto-deploys in ~30 seconds.&lt;/p></description></item></channel></rss>

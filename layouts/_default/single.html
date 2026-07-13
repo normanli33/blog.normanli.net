@@ -4,13 +4,18 @@
   <h1>{{ .Title }}</h1>
   {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
 
-  {{ if .WordCount | ge 800 }}
-  <nav class="toc-inline" aria-label="Contents">
+  {{ if and (gt .WordCount 800) (.TableOfContents) }}
+  <div class="toc">
     <span class="ledger">Contents</span>
     {{ .TableOfContents }}
-  </nav>
+  </div>
   {{ end }}
 
   <div class="content">{{ .Content }}</div>
 </article>
+
+<div class="pager">
+  {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">&larr; {{ .Title }}</a>{{ else }}<span class="muted"></span>{{ end }}
+  {{ with .NextInSection }}<a href="{{ .RelPermalink }}">{{ .Title }} &rarr;</a>{{ end }}
+</div>
 {{ end }}

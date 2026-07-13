@@ -14,8 +14,6 @@
   demand forecasting; exploring semantic-layer design for procurement analytics.
 </div>
 
-{{ $sections := slice "analysis" "knowledge" }}
-
 <h2 class="section-label ledger">Analysis</h2>
 {{ range where site.RegularPages "Section" "analysis" | first 5 }}
 <a class="entry" href="{{ .RelPermalink }}">
@@ -37,6 +35,14 @@
 <a class="entry" href="{{ .RelPermalink }}">
   <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
   <span class="entry-title">{{ .Title }}<span>{{ .ReadingTime }} min</span></span>
+</a>
+{{ end }}
+
+<h2 class="section-label ledger">Study</h2>
+{{ range where site.RegularPages "Section" "study" | first 5 }}
+<a class="entry" href="{{ .RelPermalink }}">
+  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
+  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
 </a>
 {{ end }}
 

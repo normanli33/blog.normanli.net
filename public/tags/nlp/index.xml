@@ -1,5 +1,58 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>nlp on Norman Li — Systems, decisions, outcomes</title><link>https://normanli.net/tags/nlp/</link><description>Recent content in nlp on Norman Li — Systems, decisions, outcomes</description><generator>Hugo -- gohugo.io</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://normanli.net/tags/nlp/index.xml" rel="self" type="application/rss+xml"/><item><title>CS336 — Language Modeling from Scratch</title><link>https://normanli.net/study/cs336-language-modeling-from-scratch/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/study/cs336-language-modeling-from-scratch/</guid><description>Course: Stanford CS336 — Spring 2026
-Instructors: Percy Liang &amp;amp; Tatsunori Hashimoto
-Unit value: 5 units — implementation-heavy
-&amp;ldquo;We will lead students through every aspect of language model creation, including data collection and cleaning for pre-training, transformer model construction, model training, and evaluation before deployment.&amp;rdquo;
-Prerequisites Proficiency in Python (minimal scaffolding, order-of-magnitude more code than typical AI classes) PyTorch + systems concepts (memory hierarchy, GPU efficiency) Calculus, Linear Algebra, Probability Machine Learning (CS221/CS229/CS224N or equivalent) Assignments # Topic Key Skills 1 Basics Tokenisation, embeddings, transformer forward pass 2 Systems Kernel optimisation, memory-efficient attention, distributed training 3 Scaling Multi-GPU training, pipeline &amp;amp; tensor parallelism 4 Data Data collection, cleaning, deduplication, mixing strategies 5 Alignment &amp;amp; RL RLHF, DPO, reasoning-oriented RL Logistics Lectures: Mon/Wed 3:00–4:20pm PT (Skilling Auditorium) Recordings: YouTube playlist GPU: Cloud compute for self-study (follow-along at home) Why this course matters Most LLM courses treat the model as a black box API.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nlp on Norman Li</title><link>https://normanli.net/tags/nlp/</link><description>Recent content in Nlp on Norman Li</description><generator>Hugo</generator><language>en-au</language><lastBuildDate>Mon, 13 Jul 2026 00:00:00 +1000</lastBuildDate><atom:link href="https://normanli.net/tags/nlp/index.xml" rel="self" type="application/rss+xml"/><item><title>CS336 — Language Modeling from Scratch</title><link>https://normanli.net/study/cs336-language-modeling-from-scratch/</link><pubDate>Mon, 13 Jul 2026 00:00:00 +1000</pubDate><guid>https://normanli.net/study/cs336-language-modeling-from-scratch/</guid><description>&lt;p>&lt;strong>Course:&lt;/strong> &lt;a href="https://cs336.stanford.edu/">Stanford CS336&lt;/a> — Spring 2026&lt;br>
+&lt;strong>Instructors:&lt;/strong> Percy Liang &amp;amp; Tatsunori Hashimoto&lt;br>
+&lt;strong>Unit value:&lt;/strong> 5 units — implementation-heavy&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;We will lead students through every aspect of language model creation, including data collection and cleaning for pre-training, transformer model construction, model training, and evaluation before deployment.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;ul>
+&lt;li>Proficiency in Python (minimal scaffolding, order-of-magnitude more code than typical AI classes)&lt;/li>
+&lt;li>PyTorch + systems concepts (memory hierarchy, GPU efficiency)&lt;/li>
+&lt;li>Calculus, Linear Algebra, Probability&lt;/li>
+&lt;li>Machine Learning (CS221/CS229/CS224N or equivalent)&lt;/li>
+&lt;/ul>
+&lt;h2 id="assignments">Assignments&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>#&lt;/th>
+ &lt;th>Topic&lt;/th>
+ &lt;th>Key Skills&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>1&lt;/td>
+ &lt;td>Basics&lt;/td>
+ &lt;td>Tokenisation, embeddings, transformer forward pass&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>2&lt;/td>
+ &lt;td>Systems&lt;/td>
+ &lt;td>Kernel optimisation, memory-efficient attention, distributed training&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>3&lt;/td>
+ &lt;td>Scaling&lt;/td>
+ &lt;td>Multi-GPU training, pipeline &amp;amp; tensor parallelism&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>4&lt;/td>
+ &lt;td>Data&lt;/td>
+ &lt;td>Data collection, cleaning, deduplication, mixing strategies&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>5&lt;/td>
+ &lt;td>Alignment &amp;amp; RL&lt;/td>
+ &lt;td>RLHF, DPO, reasoning-oriented RL&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="logistics">Logistics&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Lectures:&lt;/strong> Mon/Wed 3:00–4:20pm PT (Skilling Auditorium)&lt;/li>
+&lt;li>&lt;strong>Recordings:&lt;/strong> &lt;a href="https://www.youtube.com/playlist?list=PLoROMvodv4rOwGM7CItm7WzqBR4Y9J1xL">YouTube playlist&lt;/a>&lt;/li>
+&lt;li>&lt;strong>GPU:&lt;/strong> Cloud compute for self-study (follow-along at home)&lt;/li>
+&lt;/ul>
+&lt;h2 id="why-this-course-matters">Why this course matters&lt;/h2>
+&lt;p>Most LLM courses treat the model as a black box API. CS336 is the opposite — you implement everything from scratch, mirroring the approach of an OS course where you build a full operating system. This gives you:&lt;/p></description></item></channel></rss>

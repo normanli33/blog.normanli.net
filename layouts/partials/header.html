@@ -3,7 +3,7 @@
   <nav aria-label="Site">
     <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Writing</a>
     <a href="{{ "/projects/" | relURL }}"{{ if eq .Section "projects" }} class="active"{{ end }}>Projects</a>
-    <a href="{{ "/about/" | relURL }}"{{ if eq .Section "about" }} class="active"{{ end }}>About</a>
+    <a href="{{ "/about/" | relURL }}"{{ if eq .RelPermalink "/about/" }} class="active"{{ end }}>About</a>
     <button class="theme-btn" id="theme-toggle" aria-label="Toggle colour theme">◑&thinsp;theme</button>
     <button class="menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </nav>
