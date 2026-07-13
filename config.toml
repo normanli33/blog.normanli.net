@@ -5,6 +5,7 @@ enableRobotsTXT = true
 
 [params]
   description = "Supply chain, analytics and practical AI — explained through clear models and real work."
+  mainSections = ["analysis", "projects", "knowledge", "study"]
   author = "Norman Li"
 
 [markup]
