@@ -1,1 +1,7 @@
-{{ define "main" }}<section class="page-hero shell about-hero"><span class="kicker">About</span><h1>I work at the intersection of operations, data, and technology.</h1><p>I'm Norman—a supply chain professional and business analyst who enjoys making complicated systems easier to understand and improve.</p></section><section class="shell about-grid"><div class="prose">{{ .Content }}</div><aside><div class="aside-card"><span>Core toolkit</span><div class="skill-cloud"><b>Supply chain</b><b>Python</b><b>SQL</b><b>Power BI</b><b>Demand planning</b><b>AI automation</b></div></div><div class="aside-card"><span>Elsewhere</span><a class="aside-link" href="https://github.com/normanli33">GitHub ↗</a><a class="aside-link" href="mailto:info@normanli.net">Email ↗</a></div></aside></section>{{ end }}
+{{ define "main" }}
+<div class="page-head">
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Description }}</p>
+</div>
+<div class="content">{{ .Content }}</div>
+{{ end }}

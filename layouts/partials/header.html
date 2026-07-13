@@ -1,15 +1,20 @@
 <header class="site-header">
-  <div class="shell nav-wrap">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="Norman Li home"><span class="brand-mark">NL</span><span>Norman Li</span></a>
-    <nav class="desktop-nav" aria-label="Primary">
-      <a href="{{ "/analysis/" | relURL }}">Analysis</a><a href="{{ "/projects/" | relURL }}">Projects</a><a href="{{ "/knowledge/" | relURL }}">Knowledge</a><a href="{{ "/about/" | relURL }}">About</a>
+  <div class="wrap nav-wrap">
+    <a class="site-title" href="{{ "/" | relURL }}">Norman Li</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="{{ "/analysis/" | relURL }}">Analysis</a>
+      <a href="{{ "/projects/" | relURL }}">Projects</a>
+      <a href="{{ "/knowledge/" | relURL }}">Knowledge</a>
+      <a href="{{ "/study/" | relURL }}">Study</a>
+      <a href="{{ "/about/" | relURL }}">About</a>
     </nav>
-    <div class="nav-actions">
-      <button class="search-button" data-search-open aria-label="Open search"><span>Search</span><kbd>⌘ K</kbd></button>
-      <button class="icon-button" id="theme-toggle" aria-label="Toggle colour theme">◐</button>
-      <button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    </div>
+    <button class="menu-button" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
-  <nav class="mobile-nav shell" id="mobile-nav" aria-label="Mobile" hidden><a href="/analysis/">Analysis</a><a href="/projects/">Projects</a><a href="/knowledge/">Knowledge</a><a href="/about/">About</a></nav>
+  <nav class="mobile-nav wrap" id="mobile-nav" aria-label="Mobile" hidden>
+    <a href="/analysis/">Analysis</a>
+    <a href="/projects/">Projects</a>
+    <a href="/knowledge/">Knowledge</a>
+    <a href="/study/">Study</a>
+    <a href="/about/">About</a>
+  </nav>
 </header>
-

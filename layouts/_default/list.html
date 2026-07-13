@@ -1,1 +1,19 @@
-{{ define "main" }}<header class="page-hero shell"><span class="kicker">{{ .Section | humanize }}</span><h1>{{ .Title }}</h1><p>{{ .Description }}</p></header><section class="shell listing-grid">{{ range .Pages }}<a class="listing-card" href="{{ .RelPermalink }}"><div class="card-meta"><span class="pill">{{ with .Params.tags }}{{ index . 0 }}{{ else }}{{ $.Section | default "note" }}{{ end }}</span><span>{{ .ReadingTime }} min</span></div><h2>{{ .Title }}</h2><p>{{ .Summary }}</p><span class="card-link">Read more →</span></a>{{ end }}</section>{{ end }}
+{{ define "main" }}
+<div class="section-head">
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p>{{ . }}</p>{{ end }}
+</div>
+{{ range .Pages.ByDate.Reverse }}
+<div class="entry">
+  <time>{{ .Date.Format "2 Jan 2006" }}</time>
+  <div>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary }}</p>
+    <div class="entry-meta">
+      {{ with .Params.tags }}{{ range first 2 . }}<span class="tag">{{ . }}</span>{{ end }}{{ end }}
+      <span class="reading">{{ .ReadingTime }} min</span>
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}
