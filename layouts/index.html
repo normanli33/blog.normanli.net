@@ -1,30 +1,43 @@
 {{ define "main" }}
-<section class="hero shell">
-  <div class="eyebrow"><span class="status-dot"></span> Supply chain · analytics · applied AI</div>
-  <h1>Analyze.<br><span class="gradient-text">Achieve.</span></h1>
-  <p class="hero-copy">I use analytical thinking and technology to turn complex supply chain headaches into clear, actionable decisions.</p>
-  <div class="hero-actions"><a class="button primary" href="/projects/">Explore my work <span>→</span></a><a class="button secondary" href="/analysis/">Read the analysis</a></div>
-  <div class="proof-row"><span>Demand planning</span><i></i><span>Inventory optimisation</span><i></i><span>Business intelligence</span><i></i><span>AI automation</span></div>
-</section>
 
-<section class="section shell">
-  <div class="section-heading"><div><span class="kicker">Selected work</span><h2>Problems, worked through.</h2></div><a class="text-link" href="/projects/">View all projects →</a></div>
-  <div class="featured-grid">
-    <a class="feature-card large" href="/projects/inventory-control/"><div class="card-meta"><span class="pill">Inventory</span><span>Case study · 8 min</span></div><div class="mini-chart" aria-hidden="true"><div class="chart-grid"></div><svg viewBox="0 0 600 160"><path d="M0 135 C70 120 80 130 145 88 S245 118 300 70 S405 75 455 40 S540 60 600 20" fill="none" stroke="currentColor" stroke-width="3"/><path d="M0 135 C70 120 80 130 145 88 S245 118 300 70 S405 75 455 40 S540 60 600 20 L600 160 L0 160Z" fill="url(#fade)"/><defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3972e8" stop-opacity=".22"/><stop offset="1" stop-color="#3972e8" stop-opacity="0"/></linearGradient></defs></svg></div><h3>Finding the inventory hiding in plain sight</h3><p>A practical segmentation model that surfaces excess, protects service levels, and gives planners a credible action queue.</p><span class="card-link">Read case study →</span></a>
-    <div class="stack">
-      <a class="feature-card" href="/analysis/forecast-bias/"><div class="card-meta"><span class="pill">Forecasting</span><span>Analysis</span></div><h3>Forecast accuracy is not enough</h3><p>Why bias tells a more useful operational story—and how to act on it.</p><span class="card-link">Read analysis →</span></a>
-      <a class="feature-card dark-card" href="/projects/analytics-copilot/"><div class="card-meta"><span class="pill">Applied AI</span><span>Prototype</span></div><h3>An analytics copilot that cites its work</h3><p>Designing a safer path from natural-language questions to trusted answers.</p><span class="card-link">Explore project →</span></a>
-    </div>
-  </div>
-</section>
+<div class="intro">
+  <p>Supply chain analyst in Sydney. I work on demand forecasting, procurement
+  automation and the systems around them — Python, SQL, Power BI, and
+  increasingly LLM pipelines.</p>
+  <p>This site is my working notebook: problems I've solved, methods I've
+  tested, and honest notes on what held up in production and what didn't.</p>
+</div>
 
-<section class="section shell split-section">
-  <div><span class="kicker">Knowledge library</span><h2>Ideas connected,<br>not just collected.</h2><p class="section-copy">A growing reference for the models, methods, and tools I use. Short definitions connect to deeper analysis and real projects.</p><a class="button secondary" href="/knowledge/">Browse all topics →</a></div>
-  <div class="topic-list"><a href="/knowledge/safety-stock/"><span><b>Safety stock</b><small>Inventory · Planning</small></span><strong>01</strong></a><a href="/knowledge/forecast-bias/"><span><b>Forecast bias</b><small>Forecasting · Metrics</small></span><strong>02</strong></a><a href="/knowledge/abc-xyz/"><span><b>ABC–XYZ analysis</b><small>Segmentation · Portfolio</small></span><strong>03</strong></a><a href="/knowledge/semantic-layer/"><span><b>Semantic layers</b><small>Data · Analytics engineering</small></span><strong>04</strong></a></div>
-</section>
+<div class="now">
+  <span class="ledger">Currently</span>
+  Benchmarking LightGBM against the Nixtla stack for SKU-level intermittent
+  demand forecasting; exploring semantic-layer design for procurement analytics.
+</div>
 
-<section class="section shell"><div class="section-heading"><div><span class="kicker">Latest thinking</span><h2>Notes from the work.</h2></div></div><div class="article-list">{{ range first 3 (where site.RegularPages "Section" "analysis") }}<a href="{{ .RelPermalink }}"><time>{{ .Date.Format "02 Jan 2006" }}</time><div><h3>{{ .Title }}</h3><p>{{ .Summary }}</p></div><span>→</span></a>{{ end }}</div></section>
+{{ $sections := slice "analysis" "knowledge" }}
 
-<section class="cta shell"><span class="kicker">Start a conversation</span><h2>Have a difficult operational<br>problem worth unpacking?</h2><p>I’m always interested in thoughtful work across supply chain, analytics, and practical AI.</p><a class="button light" href="mailto:info@normanli.net">Get in touch →</a></section>
+<h2 class="section-label ledger">Analysis</h2>
+{{ range where site.RegularPages "Section" "analysis" | first 5 }}
+<a class="entry" href="{{ .RelPermalink }}">
+  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
+  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
+</a>
 {{ end }}
 
+<h2 class="section-label ledger">Knowledge</h2>
+{{ range where site.RegularPages "Section" "knowledge" | first 5 }}
+<a class="entry" href="{{ .RelPermalink }}">
+  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
+  <span class="entry-title">{{ .Title }}<span>{{ with .Params.tags }}{{ index . 0 }}{{ end }} · {{ .ReadingTime }} min</span></span>
+</a>
+{{ end }}
+
+<h2 class="section-label ledger">Projects</h2>
+{{ range where site.RegularPages "Section" "projects" | first 5 }}
+<a class="entry" href="{{ .RelPermalink }}">
+  <span class="entry-date">{{ .Date.Format "2 Jan 2006" }}</span>
+  <span class="entry-title">{{ .Title }}<span>{{ .ReadingTime }} min</span></span>
+</a>
+{{ end }}
+
+{{ end }}

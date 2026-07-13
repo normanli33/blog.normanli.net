@@ -1,15 +1,15 @@
-<header class="site-header">
-  <div class="shell nav-wrap">
-    <a class="brand" href="{{ "/" | relURL }}" aria-label="Norman Li home"><span class="brand-mark">NL</span><span>Norman Li</span></a>
-    <nav class="desktop-nav" aria-label="Primary">
-      <a href="{{ "/analysis/" | relURL }}">Analysis</a><a href="{{ "/projects/" | relURL }}">Projects</a><a href="{{ "/knowledge/" | relURL }}">Knowledge</a><a href="{{ "/about/" | relURL }}">About</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="search-button" data-search-open aria-label="Open search"><span>Search</span><kbd>⌘ K</kbd></button>
-      <button class="icon-button" id="theme-toggle" aria-label="Toggle colour theme">◐</button>
-      <button class="icon-button menu-button" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-    </div>
-  </div>
-  <nav class="mobile-nav shell" id="mobile-nav" aria-label="Mobile" hidden><a href="/analysis/">Analysis</a><a href="/projects/">Projects</a><a href="/knowledge/">Knowledge</a><a href="/about/">About</a></nav>
+<header>
+  <a class="wordmark" href="{{ "/" | relURL }}">Norman Li</a>
+  <nav aria-label="Site">
+    <a href="{{ "/" | relURL }}"{{ if .IsHome }} class="active"{{ end }}>Writing</a>
+    <a href="{{ "/projects/" | relURL }}"{{ if eq .Section "projects" }} class="active"{{ end }}>Projects</a>
+    <a href="{{ "/about/" | relURL }}"{{ if eq .Section "about" }} class="active"{{ end }}>About</a>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle colour theme">◑&thinsp;theme</button>
+    <button class="menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </nav>
 </header>
-
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <a href="/">Writing</a>
+  <a href="/projects/">Projects</a>
+  <a href="/about/">About</a>
+</nav>

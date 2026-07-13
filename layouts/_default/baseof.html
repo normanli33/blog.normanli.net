@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="{{ site.Language.Lang }}" data-theme="light">
+<html lang="{{ site.Language.Lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-  <meta name="theme-color" content="#faf9f5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1f1e1a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FBF7F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1E1B16" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · Norman Li{{ end }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
@@ -15,20 +15,12 @@
   <link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | absURL }}" title="{{ site.Title }}">
   <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · Norman Li{{ end }}</title>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"{{ if .IsPage }}Article{{ else }}WebSite{{ end }}","name":{{ .Title | jsonify }},"url":{{ .Permalink | jsonify }},"description":{{ (or .Description site.Params.description) | jsonify }},"author":{"@type":"Person","name":"Norman Li"}}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   {{ partial "header.html" . }}
-  <main id="main">{{ block "main" . }}{{ end }}</main>
+  <main id="main" class="page">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
-  <div class="search-dialog" id="search-dialog" role="dialog" aria-modal="true" aria-labelledby="search-title" hidden>
-    <div class="search-panel">
-      <div class="search-head"><span id="search-title">Search the library</span><button class="icon-button" data-search-close aria-label="Close search">Esc</button></div>
-      <input id="search-input" type="search" placeholder="Search ideas, projects, or topics…" autocomplete="off">
-      <div id="search-results" class="search-results"><p class="muted">Try “forecasting”, “inventory”, or “Python”.</p></div>
-    </div>
-  </div>
   <script src="{{ "js/main.js" | relURL }}" defer></script>
 </body>
 </html>
