@@ -1,15 +1,7 @@
 {{ define "main" }}
-<div class="page-head">
-  <div class="meta">
-    <time>{{ .Date.Format "2 Jan 2006" }}</time>
-    <span class="sep">·</span>
-    <span>{{ .ReadingTime }} min read</span>
-    <span class="sep">·</span>
-    <a href="/{{ .Section }}/" style="color:var(--accent)">{{ .Section | humanize }}</a>
-  </div>
-  <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p>{{ . }}</p>{{ end }}
-  {{ with .Params.tags }}<div class="tags">{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</div>{{ end }}
-</div>
-<div class="content">{{ .Content }}</div>
-{{ end }}
+<div class="progress" id="reading-progress"></div>
+<article class="article-shell shell">
+  <header class="article-header"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/{{ .Section }}/">{{ .Section | humanize }}</a></div><div class="card-meta"><span class="pill">{{ with index .Params.tags 0 }}{{ . }}{{ else }}Field note{{ end }}</span><span>{{ .ReadingTime }} min read</span><span>{{ .Date.Format "02 January 2006" }}</span></div><h1>{{ .Title }}</h1><p class="lede">{{ .Description }}</p></header>
+  <div class="article-layout"><aside class="toc"><span>On this page</span>{{ .TableOfContents }}</aside><div class="prose">{{ .Content }}</div><aside class="article-aside"><div class="aside-card"><span>About the author</span><strong>Norman Li</strong><p>Supply chain professional using data and technology to make better decisions.</p></div></aside></div>
+</article>{{ end }}
+
