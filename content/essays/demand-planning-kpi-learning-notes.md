@@ -76,7 +76,9 @@ $$FVA = \text{Accuracy of process step} - \text{Accuracy of naive baseline}$$
 ## Forecast Accuracy %
 
 
+
 $$Accuracy = \max(0,\ 100\% - MAPE)$$
+
 
 (Many companies substitute WMAPE here.)
 
