@@ -13,7 +13,7 @@ Anyone can recite the MAPE formula. What separates a planner from a spreadsheet 
 
 Notation used throughout: $A_t$ = actual demand in period $t$, $F_t$ = forecast for period $t$, $n$ = number of periods.
 
-## MAPE — the metric everyone knows (and misuses)
+## MAPE — Mean Absolute Percentage Error
 
 $$MAPE = \frac{1}{n} \sum_{t=1}^{n} \left\vert \frac{A_t - F_t}{A_t} \right\vert \times 100\%$$
 
@@ -23,7 +23,7 @@ $$MAPE = \frac{1}{n} \sum_{t=1}^{n} \left\vert \frac{A_t - F_t}{A_t} \right\vert
 
 **Use it for:** high-volume products with steady, non-zero demand, and any report headed to people who don't want to see a formula.
 
-## WMAPE — MAPE that respects volume
+## WMAPE — Weighted Mean Absolute Percentage Error 
 
 $$WMAPE = \frac{\sum_{t=1}^{n} \vert A_t - F_t \vert}{\sum_{t=1}^{n} A_t}$$
 
@@ -33,7 +33,7 @@ $$WMAPE = \frac{\sum_{t=1}^{n} \vert A_t - F_t \vert}{\sum_{t=1}^{n} A_t}$$
 
 **Use it for:** aggregate reporting across a diverse portfolio: a product category, a region, a whole network.
 
-## Bias — the direction of your error
+## Bias — A distortion in the evaluation
 
 $$Bias = \frac{1}{n} \sum_{t=1}^{n} (A_t - F_t)$$
 
@@ -43,7 +43,7 @@ $$Bias = \frac{1}{n} \sum_{t=1}^{n} (A_t - F_t)$$
 
 **Use it for:** detecting systemic behaviour, like a sales team that always over-promises. Never read bias alone; always pair it with an absolute metric like MAD or MAPE.
 
-## MAD — error in physical units
+## MAD — Median Absolute Deviation
 
 $$MAD = \frac{1}{n} \sum_{t=1}^{n} \vert A_t - F_t \vert$$
 
@@ -53,7 +53,7 @@ $$MAD = \frac{1}{n} \sum_{t=1}^{n} \vert A_t - F_t \vert$$
 
 **Use it for:** SKU-level operational planning. If you're managing long overseas procurement lead times, MAD gives you the unit buffer that feeds directly into safety stock calculations.
 
-## RMSE — the metric that hates big misses
+## RMSE — Root Mean Square Error
 
 $$RMSE = \sqrt{\frac{1}{n} \sum_{t=1}^{n} (A_t - F_t)^2}$$
 
@@ -63,7 +63,7 @@ $$RMSE = \sqrt{\frac{1}{n} \sum_{t=1}^{n} (A_t - F_t)^2}$$
 
 **Use it for:** evaluating ML forecasting pipelines — it's a standard loss function in libraries like scikit-learn and XGBoost. In business terms, reach for RMSE when a single massive error costs disproportionately more than many small ones.
 
-## Forecast Value Add — does each step actually help?
+## FVA - Forecast Value Add
 
 $$FVA = \text{Accuracy of process step} - \text{Accuracy of naive baseline}$$
 
@@ -73,7 +73,7 @@ $$FVA = \text{Accuracy of process step} - \text{Accuracy of naive baseline}$$
 
 **Use it for:** justifying the ROI of planning software, and identifying which manual touches in your S&OP process should be eliminated.
 
-## Forecast Accuracy % — the positive spin
+## Forecast Accuracy %
 
 $$Accuracy = \max(0,\ 100\% - MAPE)$$
 
@@ -85,7 +85,7 @@ $$Accuracy = \max(0,\ 100\% - MAPE)$$
 
 **Use it for:** executive dashboards and vendor scorecards — anywhere a positive framing is expected. Just document which formula sits underneath it.
 
-## Tracking Signal — the smoke alarm
+## Tracking Signal
 
 $$TS = \frac{\sum (A_t - F_t)}{MAD}$$
 
