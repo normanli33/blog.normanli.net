@@ -10,11 +10,7 @@ KL divergence—Kullback–Leibler divergence—measures how different one proba
 
 For discrete distributions $P$ and $Q$:
 
-$$
-D_{\mathrm{KL}}(P\|Q)
-=
-\sum_x P(x)\log\left(\frac{P(x)}{Q(x)}\right)
-$$
+$$D_{\mathrm{KL}}(P\|Q)=\sum_x P(x)\log\left(\frac{P(x)}{Q(x)}\right)$$
 
 It can be interpreted as:
 
@@ -24,31 +20,19 @@ It can be interpreted as:
 
 Suppose the true coin distribution is:
 
-$$
-P(\text{heads})=0.8, \qquad P(\text{tails})=0.2
-$$
+$$P(\text{heads})=0.8, \qquad P(\text{tails})=0.2$$
 
 but the model predicts:
 
-$$
-Q(\text{heads})=0.5, \qquad Q(\text{tails})=0.5
-$$
+$$Q(\text{heads})=0.5, \qquad Q(\text{tails})=0.5$$
 
 Then:
 
-$$
-D_{\mathrm{KL}}(P\|Q)
-=
-0.8\log\frac{0.8}{0.5}
-+
-0.2\log\frac{0.2}{0.5}
-$$
+$$D_{\mathrm{KL}}(P\|Q)=0.8\log\frac{0.8}{0.5}+0.2\log\frac{0.2}{0.5}$$
 
 Using natural logarithms:
 
-$$
-D_{\mathrm{KL}}(P\|Q) \approx 0.193
-$$
+$$D_{\mathrm{KL}}(P\|Q) \approx 0.193$$
 
 A KL divergence of **0** means the two distributions are identical. A larger value means $Q$ is a poorer approximation of $P$.
 
@@ -56,19 +40,13 @@ A KL divergence of **0** means the two distributions are identical. A larger val
 
 ### 1. KL divergence is not symmetric
 
-$$
-D_{\mathrm{KL}}(P\|Q)
-\neq
-D_{\mathrm{KL}}(Q\|P)
-$$
+$$D_{\mathrm{KL}}(P\|Q) \neq D_{\mathrm{KL}}(Q\|P)$$
 
 Therefore, KL divergence is not a true mathematical distance.
 
 ### 2. KL divergence is always non-negative
 
-$$
-D_{\mathrm{KL}}(P\|Q) \geq 0
-$$
+$$D_{\mathrm{KL}}(P\|Q) \geq 0$$
 
 Equality holds only when $P$ and $Q$ are identical, apart from events with zero probability.
 
@@ -76,9 +54,7 @@ Equality holds only when $P$ and $Q$ are identical, apart from events with zero 
 
 If $P(x)>0$ but $Q(x)=0$, then:
 
-$$
-D_{\mathrm{KL}}(P\|Q)=\infty
-$$
+$$D_{\mathrm{KL}}(P\|Q)=\infty$$
 
 This happens because the model assigns zero probability to an event that can actually occur.
 
@@ -95,9 +71,7 @@ KL divergence is widely used in:
 
 It is closely related to cross-entropy:
 
-$$
-H(P,Q)=H(P)+D_{\mathrm{KL}}(P\|Q)
-$$
+$$H(P,Q)=H(P)+D_{\mathrm{KL}}(P\|Q)$$
 
 When the true distribution $P$ is fixed, its entropy $H(P)$ is also fixed. Therefore, minimizing cross-entropy is equivalent to minimizing the KL divergence between the true distribution and the model prediction.
 
