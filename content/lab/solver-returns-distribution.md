@@ -56,3 +56,5 @@ The fitted mean, dispersion, and recovery rate can provide useful insights into 
 - Whether the return cycle is changing over time
 
 The forecasting accuracy of this model may be limited because it assumes that return behaviour follows a stable normal distribution. Actual returns may also be affected by seasonality, operational delays, customer behaviour, missing assets, and changes in issue volumes.
+
+A future lab will compare this distribution-fitting approach with time-series forecasting models, including ARIMA and SARIMAX, to determine whether they provide better return forecasts.
