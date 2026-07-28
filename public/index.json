@@ -3,6 +3,15 @@
   
   
   {
+    "title": "Excel Solver - Returns-Distribution Fitter",
+    "url": "/lab/solver-returns-distribution/",
+    "section": "lab",
+    "summary": "The problem When assets are issued each week and returned over subsequent weeks—such as containers, pallets, tools, and other returnable …",
+    "tags": ["supply-chain","excel","forecasting"]
+  }
+  
+  ,
+  {
     "title": "ABC-XYZ Analysis: A Practical Guide to Inventory Segmentation for Demand Planning",
     "url": "/essays/abc-xyz-analysis-inventory-segmentation/",
     "section": "essays",

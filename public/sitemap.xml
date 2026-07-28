@@ -2,6 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://normanli.net/tags/excel/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/lab/solver-returns-distribution/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/tags/forecasting/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/lab/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/tags/supply-chain/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://normanli.net/tags/</loc>
+    <lastmod>2026-07-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://normanli.net/tags/abc-analysis/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,27 +62,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://normanli.net/tags/forecasting/</loc>
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://normanli.net/tags/inventory/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://normanli.net/</loc>
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://normanli.net/tags/segmentation/</loc>
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://normanli.net/tags/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -94,11 +114,6 @@
   </url><url>
     <loc>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</loc>
     <lastmod>2026-07-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://normanli.net/lab/</loc>
-    <lastmod>2026-06-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -209,10 +224,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://normanli.net/tags/statistics/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://normanli.net/tags/supply-chain/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
