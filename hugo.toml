@@ -13,7 +13,7 @@ summaryLength = 40
 [params]
   tagline = "Supply chain, data, and practical AI — thought out loud."
   description = "Norman Li writes on supply chain planning, business analysis, data, and practical AI. A personal library of essays, projects, and evergreen notes."
-  email = "info@normanli.net"
+  email = "hello@normanli.net"
   github = "https://github.com/normanli33"
   linkedin = "https://www.linkedin.com/"
   resume = "/files/norman-li-resume.pdf"

@@ -1,28 +1,117 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Norman Li</title><link>https://normanli.net/</link><description>Recent content on Norman Li</description><generator>Hugo</generator><language>en</language><lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://normanli.net/index.xml" rel="self" type="application/rss+xml"/><item><title>Demand Planning KPIs: Learning Notes on Forecast Accuracy Metrics</title><link>https://normanli.net/essays/demand-planning-kpi-learning-notes/</link><pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/demand-planning-kpi-learning-notes/</guid><description>Eight forecast KPIs that come up constantly in demand planning — with the formula, the business meaning, and the trap hidden inside each one.</description></item><item><title>Reading Theory of Constraints again</title><link>https://normanli.net/stream/reading-theory-of-constraints/</link><pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/stream/reading-theory-of-constraints/</guid><description>&lt;p>Reading about theory of constraints again. Keep circling back to it whenever a planning process feels stuck — the bottleneck is rarely where the complaints are loudest.&lt;/p></description></item><item><title>TIL: pandas .explode() for BOM flattening</title><link>https://normanli.net/stream/til-explode/</link><pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/stream/til-explode/</guid><description>&lt;p>TIL: &lt;code>pandas.DataFrame.explode()&lt;/code> solves the bill-of-materials flattening problem cleanly — one list-column per parent, exploded into one row per component, no manual loop.&lt;/p></description></item><item><title>Why Your Safety Stock Is Lying to You</title><link>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</link><pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</guid><description>Every planner inherits the same textbook formula for safety stock. Almost nobody checks whether their demand actually looks the way the formula assumes it does.</description></item><item><title>Reorder-Point Simulator</title><link>https://normanli.net/lab/reorder-point-simulator/</link><pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/lab/reorder-point-simulator/</guid><description>&lt;h2 id="the-problem">The problem&lt;/h2>
-&lt;p>Planners kept asking &amp;ldquo;what happens to stockouts if we drop safety stock by 10%&amp;rdquo; and getting an answer three days later, after a spreadsheet exercise. This simulator answers it in a few seconds.&lt;/p>
-&lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>A discrete-event simulation over historical daily demand: feed in a demand series, a lead time distribution, and a reorder policy, and it plays the policy forward against real (not assumed-normal) demand.&lt;/p></description></item><item><title>On forecast accuracy metrics</title><link>https://normanli.net/stream/on-forecast-accuracy-metrics/</link><pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/stream/on-forecast-accuracy-metrics/</guid><description>&lt;p>Every team measures forecast accuracy differently, and almost nobody states which one they mean. MAPE punishes low-volume SKUs unfairly; WMAPE fixes that but hides SKU-level misses. Worth writing up properly at some point.&lt;/p></description></item><item><title>A Demand Planner's Guide to LLM Evals</title><link>https://normanli.net/essays/demand-planners-guide-to-llm-evals/</link><pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/demand-planners-guide-to-llm-evals/</guid><description>Evaluating a prompt change is a forecasting problem in disguise: you need a baseline, a held-out test set, and a way to tell signal from noise.</description></item><item><title>The Join That Broke Procurement</title><link>https://normanli.net/essays/the-join-that-broke-procurement/</link><pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/the-join-that-broke-procurement/</guid><description>A silent one-to-many join quietly tripled our open-PO totals for two months before anyone noticed the number looked wrong.</description></item><item><title>PO Anomaly Detector</title><link>https://normanli.net/lab/po-anomaly-detector/</link><pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/lab/po-anomaly-detector/</guid><description>&lt;h2 id="the-problem">The problem&lt;/h2>
-&lt;p>Duplicate and near-duplicate purchase orders were slipping through — same vendor, same amount, submitted twice within a few days. Manual review only caught them after the second payment cleared.&lt;/p>
-&lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>A nightly SQL job flags PO pairs within the same vendor where amount and description are within a similarity threshold and the submission dates are close together, surfaced in a Power BI report the procurement team checks each morning.&lt;/p></description></item><item><title>Vendor Scorecard</title><link>https://normanli.net/lab/vendor-scorecard/</link><pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate><guid>https://normanli.net/lab/vendor-scorecard/</guid><description>&lt;h2 id="the-problem">The problem&lt;/h2>
-&lt;p>Vendor performance reviews ran on whichever spreadsheet the category manager happened to maintain — inconsistent metrics, no history, no way to compare vendors across categories.&lt;/p>
-&lt;h2 id="approach">Approach&lt;/h2>
-&lt;p>A single Power BI model combining on-time delivery, quality rejection rate, and price variance against contract, refreshed weekly from the ERP and quality systems.&lt;/p></description></item><item><title>Bullwhip Effect</title><link>https://normanli.net/garden/bullwhip-effect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/bullwhip-effect/</guid><description>&lt;h2 id="example">Example&lt;/h2>
-&lt;p>Retail demand for a product ticks up 10% one week. The retailer, wanting a buffer, orders 20% more from the distributor. The distributor, seeing that 20% jump and wanting its own buffer, orders 40% more from the manufacturer. By the time the signal reaches raw-material suppliers, a 10% demand change looks like a 60%+ swing.&lt;/p></description></item><item><title>KL Divergence</title><link>https://normanli.net/garden/kl-divergence/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/kl-divergence/</guid><description>&lt;p>KL divergence—Kullback–Leibler divergence—measures how different one probability distribution is from another.&lt;/p>
-&lt;p>For discrete distributions $P$ and $Q$:&lt;/p>
-&lt;p>$$D_{\mathrm{KL}}(P|Q)=\sum_x P(x)\log\left(\frac{P(x)}{Q(x)}\right)$$&lt;/p>
-&lt;p>It can be interpreted as:&lt;/p>
-&lt;blockquote>
-&lt;p>The extra information loss incurred when using $Q$ to approximate the true distribution $P$.&lt;/p>&lt;/blockquote>
-&lt;h2 id="simple-example">Simple Example&lt;/h2>
-&lt;p>Suppose the true coin distribution is:&lt;/p></description></item><item><title>LLM Eval Harness</title><link>https://normanli.net/garden/llm-eval-harness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/llm-eval-harness/</guid><description>&lt;h2 id="example">Example&lt;/h2>
-&lt;p>A fixed set of representative inputs, each with a rubric of pass/fail checks rather than a single subjective quality score:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">RUBRIC&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mentions_driver&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">lambda&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;because&amp;#34;&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">lower&lt;/span>&lt;span class="p">(),&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;correct_direction&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">lambda&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">expected_direction&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;no_hallucinated_numbers&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">lambda&lt;/span> &lt;span class="n">text&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="ow">not&lt;/span> &lt;span class="n">contains_unverified_number&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">),&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Every candidate prompt runs against the same fixed set before it ships, so a change is judged against a stable baseline instead of a handful of examples that happened to look good.&lt;/p></description></item><item><title>Reorder Point</title><link>https://normanli.net/garden/reorder-point/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/reorder-point/</guid><description>&lt;h2 id="example">Example&lt;/h2>
-&lt;p>A SKU sells 42 units a day on average, with a 9-day supplier lead time and 120 units of safety stock:&lt;/p>
-&lt;pre tabindex="0">&lt;code>reorder_point = (42 × 9) + 120 = 498 units
-&lt;/code>&lt;/pre>&lt;p>When on-hand plus on-order inventory drops to 498, a new order is placed — not when the shelf is already empty.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Norman Li</title>
+    <link>https://normanli.net/</link>
+    <description>Recent content on Norman Li</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://normanli.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ABC-XYZ Analysis: A Practical Guide to Inventory Segmentation for Demand Planning</title>
+      <link>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</link>
+      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</guid>
+      <description>ABC tells you what matters financially. XYZ tells you what you can actually forecast. Together they form the foundation of every sensible inventory strategy.</description>
+    </item>
+    <item>
+      <title>Demand Planning KPIs: Learning Notes on Forecast Accuracy Metrics</title>
+      <link>https://normanli.net/essays/demand-planning-kpi-learning-notes/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/essays/demand-planning-kpi-learning-notes/</guid>
+      <description>Eight forecast KPIs that come up constantly in demand planning — with the formula, the business meaning, and the trap hidden inside each one.</description>
+    </item>
+    <item>
+      <title>Reading Theory of Constraints again</title>
+      <link>https://normanli.net/stream/reading-theory-of-constraints/</link>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/stream/reading-theory-of-constraints/</guid>
+      <description>&lt;p&gt;Reading about theory of constraints again. Keep circling back to it whenever a planning process feels stuck — the bottleneck is rarely where the complaints are loudest.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TIL: pandas .explode() for BOM flattening</title>
+      <link>https://normanli.net/stream/til-explode/</link>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/stream/til-explode/</guid>
+      <description>&lt;p&gt;TIL: &lt;code&gt;pandas.DataFrame.explode()&lt;/code&gt; solves the bill-of-materials flattening problem cleanly — one list-column per parent, exploded into one row per component, no manual loop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Your Safety Stock Is Lying to You</title>
+      <link>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</link>
+      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</guid>
+      <description>Every planner inherits the same textbook formula for safety stock. Almost nobody checks whether their demand actually looks the way the formula assumes it does.</description>
+    </item>
+    <item>
+      <title>Reorder-Point Simulator</title>
+      <link>https://normanli.net/lab/reorder-point-simulator/</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/lab/reorder-point-simulator/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;Planners kept asking &amp;ldquo;what happens to stockouts if we drop safety stock by 10%&amp;rdquo; and getting an answer three days later, after a spreadsheet exercise. This simulator answers it in a few seconds.&lt;/p&gt;&#xA;&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;&#xA;&lt;p&gt;A discrete-event simulation over historical daily demand: feed in a demand series, a lead time distribution, and a reorder policy, and it plays the policy forward against real (not assumed-normal) demand.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On forecast accuracy metrics</title>
+      <link>https://normanli.net/stream/on-forecast-accuracy-metrics/</link>
+      <pubDate>Thu, 25 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/stream/on-forecast-accuracy-metrics/</guid>
+      <description>&lt;p&gt;Every team measures forecast accuracy differently, and almost nobody states which one they mean. MAPE punishes low-volume SKUs unfairly; WMAPE fixes that but hides SKU-level misses. Worth writing up properly at some point.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Demand Planner&#39;s Guide to LLM Evals</title>
+      <link>https://normanli.net/essays/demand-planners-guide-to-llm-evals/</link>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/essays/demand-planners-guide-to-llm-evals/</guid>
+      <description>Evaluating a prompt change is a forecasting problem in disguise: you need a baseline, a held-out test set, and a way to tell signal from noise.</description>
+    </item>
+    <item>
+      <title>The Join That Broke Procurement</title>
+      <link>https://normanli.net/essays/the-join-that-broke-procurement/</link>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/essays/the-join-that-broke-procurement/</guid>
+      <description>A silent one-to-many join quietly tripled our open-PO totals for two months before anyone noticed the number looked wrong.</description>
+    </item>
+    <item>
+      <title>PO Anomaly Detector</title>
+      <link>https://normanli.net/lab/po-anomaly-detector/</link>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/lab/po-anomaly-detector/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;Duplicate and near-duplicate purchase orders were slipping through — same vendor, same amount, submitted twice within a few days. Manual review only caught them after the second payment cleared.&lt;/p&gt;&#xA;&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;&#xA;&lt;p&gt;A nightly SQL job flags PO pairs within the same vendor where amount and description are within a similarity threshold and the submission dates are close together, surfaced in a Power BI report the procurement team checks each morning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vendor Scorecard</title>
+      <link>https://normanli.net/lab/vendor-scorecard/</link>
+      <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/lab/vendor-scorecard/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;Vendor performance reviews ran on whichever spreadsheet the category manager happened to maintain — inconsistent metrics, no history, no way to compare vendors across categories.&lt;/p&gt;&#xA;&lt;h2 id=&#34;approach&#34;&gt;Approach&lt;/h2&gt;&#xA;&lt;p&gt;A single Power BI model combining on-time delivery, quality rejection rate, and price variance against contract, refreshed weekly from the ERP and quality systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bullwhip Effect</title>
+      <link>https://normanli.net/garden/bullwhip-effect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/garden/bullwhip-effect/</guid>
+      <description>&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;&#xA;&lt;p&gt;Retail demand for a product ticks up 10% one week. The retailer, wanting a buffer, orders 20% more from the distributor. The distributor, seeing that 20% jump and wanting its own buffer, orders 40% more from the manufacturer. By the time the signal reaches raw-material suppliers, a 10% demand change looks like a 60%+ swing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>KL Divergence</title>
+      <link>https://normanli.net/garden/kl-divergence/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/garden/kl-divergence/</guid>
+      <description>&lt;p&gt;KL divergence—Kullback–Leibler divergence—measures how different one probability distribution is from another.&lt;/p&gt;&#xA;&lt;p&gt;For discrete distributions $P$ and $Q$:&lt;/p&gt;&#xA;&lt;p&gt;$$D_{\mathrm{KL}}(P|Q)=\sum_x P(x)\log\left(\frac{P(x)}{Q(x)}\right)$$&lt;/p&gt;&#xA;&lt;p&gt;It can be interpreted as:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;The extra information loss incurred when using $Q$ to approximate the true distribution $P$.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;simple-example&#34;&gt;Simple Example&lt;/h2&gt;&#xA;&lt;p&gt;Suppose the true coin distribution is:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LLM Eval Harness</title>
+      <link>https://normanli.net/garden/llm-eval-harness/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/garden/llm-eval-harness/</guid>
+      <description>&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;&#xA;&lt;p&gt;A fixed set of representative inputs, each with a rubric of pass/fail checks rather than a single subjective quality score:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;RUBRIC&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;mentions_driver&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;because&amp;#34;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lower&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(),&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;correct_direction&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;expected_direction&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;no_hallucinated_numbers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contains_unverified_number&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Every candidate prompt runs against the same fixed set before it ships, so a change is judged against a stable baseline instead of a handful of examples that happened to look good.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reorder Point</title>
+      <link>https://normanli.net/garden/reorder-point/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://normanli.net/garden/reorder-point/</guid>
+      <description>&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;&#xA;&lt;p&gt;A SKU sells 42 units a day on average, with a 9-day supplier lead time and 120 units of safety stock:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reorder_point = (42 × 9) + 120 = 498 units&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When on-hand plus on-order inventory drops to 498, a new order is placed — not when the shelf is already empty.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
