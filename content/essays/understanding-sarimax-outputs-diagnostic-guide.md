@@ -99,3 +99,7 @@ $$\hat{y}_{actual} = \exp\left(\hat{y}_{log} + \frac{\sigma^2}{2}\right)$$
 ## Summary & Takeaway
 
 While this SARIMAX(0,1,1)x(0,1,1)₇ baseline captures fundamental 7-day seasonality, it suffers from over-differencing and fails residual white-noise tests. Following the 4-step workflow above will produce a robust, production-ready forecasting model.
+
+---
+
+📄 **Prefer reading offline?** [Download the original PDF](/files/understanding-sarimax-outputs.pdf) — same guide, print-friendly layout.
