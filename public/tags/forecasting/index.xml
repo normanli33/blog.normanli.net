@@ -1,54 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Forecasting on Norman Li</title>
-    <link>https://normanli.net/tags/forecasting/</link>
-    <description>Recent content in Forecasting on Norman Li</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 27 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://normanli.net/tags/forecasting/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Excel Solver - Returns-Distribution Fitter</title>
-      <link>https://normanli.net/lab/solver-returns-distribution/</link>
-      <pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/lab/solver-returns-distribution/</guid>
-      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The problem&lt;/h2&gt;&#xA;&lt;p&gt;When assets are issued each week and returned over subsequent weeks—such as containers, pallets, tools, and other returnable equipment—planners need a model that captures the return-lag distribution.&lt;/p&gt;&#xA;&lt;p&gt;In practice, return timing is often represented by a fixed cycle time based on experience. However, this assumption may not reflect actual return behaviour and can lead to inaccurate return forecasts, inventory imbalances, or unnecessary asset purchases.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ABC-XYZ Analysis: A Practical Guide to Inventory Segmentation for Demand Planning</title>
-      <link>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</link>
-      <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</guid>
-      <description>ABC tells you what matters financially. XYZ tells you what you can actually forecast. Together they form the foundation of every sensible inventory strategy.</description>
-    </item>
-    <item>
-      <title>Demand Planning KPIs: Learning Notes on Forecast Accuracy Metrics</title>
-      <link>https://normanli.net/essays/demand-planning-kpi-learning-notes/</link>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/essays/demand-planning-kpi-learning-notes/</guid>
-      <description>Eight forecast KPIs that come up constantly in demand planning — with the formula, the business meaning, and the trap hidden inside each one.</description>
-    </item>
-    <item>
-      <title>Why Your Safety Stock Is Lying to You</title>
-      <link>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</link>
-      <pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</guid>
-      <description>Every planner inherits the same textbook formula for safety stock. Almost nobody checks whether their demand actually looks the way the formula assumes it does.</description>
-    </item>
-    <item>
-      <title>Bullwhip Effect</title>
-      <link>https://normanli.net/garden/bullwhip-effect/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/garden/bullwhip-effect/</guid>
-      <description>&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;&#xA;&lt;p&gt;Retail demand for a product ticks up 10% one week. The retailer, wanting a buffer, orders 20% more from the distributor. The distributor, seeing that 20% jump and wanting its own buffer, orders 40% more from the manufacturer. By the time the signal reaches raw-material suppliers, a 10% demand change looks like a 60%+ swing.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Reorder Point</title>
-      <link>https://normanli.net/garden/reorder-point/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://normanli.net/garden/reorder-point/</guid>
-      <description>&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;&#xA;&lt;p&gt;A SKU sells 42 units a day on average, with a 9-day supplier lead time and 120 units of safety stock:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;reorder_point = (42 × 9) + 120 = 498 units&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When on-hand plus on-order inventory drops to 498, a new order is placed — not when the shelf is already empty.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Forecasting on Norman Li</title><link>https://normanli.net/tags/forecasting/</link><description>Recent content in Forecasting on Norman Li</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://normanli.net/tags/forecasting/index.xml" rel="self" type="application/rss+xml"/><item><title>Demand Exception Reports: Purpose, Review Process, and Practical Challenges</title><link>https://normanli.net/essays/demand-exception-reports/</link><pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/demand-exception-reports/</guid><description>A Demand Exception Report is an analytical tool used in demand planning and S&amp;amp;OP to identify the products that require human investigation. This guide covers exception categories such as forecast variance, bias, spikes, stockout distortions and launch deviations, plus an eight-step review process and the practical challenges of designing a report that planners actually use.</description></item><item><title>Store Sales Forecasting with SARIMAX: A Full Walkthrough</title><link>https://normanli.net/essays/store-sales-forecasting-sarimax-walkthrough/</link><pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/store-sales-forecasting-sarimax-walkthrough/</guid><description>A complete SARIMAX forecasting pipeline on the Store Sales dataset — from EDA and stationarity testing through model fitting, residual diagnostics, back-transformation, and forecasting with confidence intervals.</description></item><item><title>Store Sales SARIMAX Forecast</title><link>https://normanli.net/lab/store-sales-sarimax-forecast/</link><pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/lab/store-sales-sarimax-forecast/</guid><description>&lt;h2 id="the-problem">The problem&lt;/h2>
+&lt;p>Daily sales at a grocery chain follow a strong weekly rhythm, but promotions and holidays throw spikes at it that a naive forecast can&amp;rsquo;t see coming. Baseline forecasts either ignore the weekly seasonality entirely or get blindsided by holiday demand.&lt;/p></description></item><item><title>Understanding SARIMAX Outputs: A Diagnostic Guide for Junior Analysts</title><link>https://normanli.net/essays/understanding-sarimax-outputs-diagnostic-guide/</link><pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/understanding-sarimax-outputs-diagnostic-guide/</guid><description>A step-by-step diagnostic guide for junior analysts on evaluating, interpreting, and refining statsmodels time-series reports.</description></item><item><title>Excel Solver - Returns-Distribution Fitter</title><link>https://normanli.net/lab/solver-returns-distribution/</link><pubDate>Mon, 27 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/lab/solver-returns-distribution/</guid><description>&lt;h2 id="the-problem">The problem&lt;/h2>
+&lt;p>When assets are issued each week and returned over subsequent weeks—such as containers, pallets, tools, and other returnable equipment—planners need a model that captures the return-lag distribution.&lt;/p>
+&lt;p>In practice, return timing is often represented by a fixed cycle time based on experience. However, this assumption may not reflect actual return behaviour and can lead to inaccurate return forecasts, inventory imbalances, or unnecessary asset purchases.&lt;/p></description></item><item><title>ABC-XYZ Analysis: A Practical Guide to Inventory Segmentation for Demand Planning</title><link>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</link><pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/abc-xyz-analysis-inventory-segmentation/</guid><description>ABC tells you what matters financially. XYZ tells you what you can actually forecast. Together they form the foundation of every sensible inventory strategy.</description></item><item><title>Demand Planning KPIs: Learning Notes on Forecast Accuracy Metrics</title><link>https://normanli.net/essays/demand-planning-kpi-learning-notes/</link><pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/demand-planning-kpi-learning-notes/</guid><description>Eight forecast KPIs that come up constantly in demand planning — with the formula, the business meaning, and the trap hidden inside each one.</description></item><item><title>Why Your Safety Stock Is Lying to You</title><link>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</link><pubDate>Thu, 02 Jul 2026 00:00:00 +0000</pubDate><guid>https://normanli.net/essays/why-your-safety-stock-is-lying-to-you/</guid><description>Every planner inherits the same textbook formula for safety stock. Almost nobody checks whether their demand actually looks the way the formula assumes it does.</description></item><item><title>Bullwhip Effect</title><link>https://normanli.net/garden/bullwhip-effect/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/bullwhip-effect/</guid><description>&lt;h2 id="example">Example&lt;/h2>
+&lt;p>Retail demand for a product ticks up 10% one week. The retailer, wanting a buffer, orders 20% more from the distributor. The distributor, seeing that 20% jump and wanting its own buffer, orders 40% more from the manufacturer. By the time the signal reaches raw-material suppliers, a 10% demand change looks like a 60%+ swing.&lt;/p></description></item><item><title>Reorder Point</title><link>https://normanli.net/garden/reorder-point/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://normanli.net/garden/reorder-point/</guid><description>&lt;h2 id="example">Example&lt;/h2>
+&lt;p>A SKU sells 42 units a day on average, with a 9-day supplier lead time and 120 units of safety stock:&lt;/p>
+&lt;pre tabindex="0">&lt;code>reorder_point = (42 × 9) + 120 = 498 units
+&lt;/code>&lt;/pre>&lt;p>When on-hand plus on-order inventory drops to 498, a new order is placed — not when the shelf is already empty.&lt;/p></description></item></channel></rss>
